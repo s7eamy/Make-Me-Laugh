@@ -16,29 +16,32 @@ func _on_attacked() -> void:
 	print("Participant " + name + " was attacked!")
 	queue_free()
 
-func play_animation(action: String, direction: String):
-	var animation = action.capitalize() + direction.capitalize()
+func play_animation(action: String, _direction: String):
+	var animation = action.capitalize() + _direction.capitalize()
 	for child in animator_node.get_children():
 		if child.animation != animation:
 			child.play(animation)
 		
 
-func _process(delta):
+func _process(_delta):
 	if get_parent().name == "PathFollow2D":
 		# change animation direction based on movement direction
 		direction = Vector2(0, 0)
+		
 		if path.position.x > last_position.x:
 			direction.x = 1
 			play_animation("walk", "right")
 		elif path.position.x < last_position.x:
 			direction.x = -1
 			play_animation("walk", "left")
+			
 		if path.position.y > last_position.y:
 			direction.y = 1
 			play_animation("walk", "down")
 		elif path.position.y < last_position.y:
 			direction.y = -1
 			play_animation("walk", "up")
+			
 		last_position = path.position
 		# change viewcone direction based on last
 		$ViewCone.rotation = direction.angle()
