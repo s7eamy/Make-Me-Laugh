@@ -19,8 +19,6 @@ func _on_attacked() -> void:
 func play_animation(action: String, direction: String):
 	var animation = action.capitalize() + direction.capitalize()
 	for child in animator_node.get_children():
-		print(child.animation)
-		print(animation)
 		if child.animation != animation:
 			child.play(animation)
 		
@@ -46,5 +44,4 @@ func _process(delta):
 		$ViewCone.rotation = direction.angle()
 	else:
 		pass
-		#animation.play("stand")
 	

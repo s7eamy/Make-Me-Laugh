@@ -6,7 +6,3 @@ var animations = get_children()
 func _ready() -> void:
 	for animation in animations:
 		animation.play()
-		
-#func _process(_delta):
-	#for animation in animations:
-		#animation.play()
