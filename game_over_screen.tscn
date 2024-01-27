@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch2h23b51hlrj"]
+
+[ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="1_bddav"]
+[ext_resource type="Script" path="res://game_over_screen.gd" id="1_h25xm"]
+
+[node name="game_over_screen" type="CanvasLayer"]
+script = ExtResource("1_h25xm")
+
+[node name="gameOverLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -309.0
+offset_top = 100.0
+offset_right = 309.0
+offset_bottom = 223.0
+grow_horizontal = 2
+theme = ExtResource("1_bddav")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 96
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="deathMessageLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.5
+offset_top = 300.0
+offset_right = 178.5
+offset_bottom = 341.0
+grow_horizontal = 2
+theme = ExtResource("1_bddav")
+text = "Reason of failure"
+
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = 175.0
+offset_right = 59.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bddav")
+text = "Quit"
+
+[node name="RestartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = 75.0
+offset_right = 59.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bddav")
+text = "Try again"
+
+[connection signal="button_down" from="QuitButton" to="." method="_on_quit_button_button_down"]
+[connection signal="button_down" from="RestartButton" to="." method="_on_restart_button_button_down"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccxfekdwud7n6"]
+[gd_scene load_steps=8 format=3 uid="uid://ccxfekdwud7n6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_u1ev2"]
 [ext_resource type="Script" path="res://player_movement.gd" id="2_oy5m2"]
+[ext_resource type="PackedScene" uid="uid://blc5ndqbdce12" path="res://hud.tscn" id="3_a7sgt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwvhx"]
 size = Vector2(50, 49)
@@ -23,6 +24,10 @@ collision_layer = 16
 collision_mask = 771
 input_pickable = true
 script = ExtResource("2_oy5m2")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerBody"]
+
+[node name="HUD" parent="PlayerBody/Camera2D" instance=ExtResource("3_a7sgt")]
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="PlayerBody"]
 unique_name_in_owner = true
@@ -63,5 +68,3 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody/VisionDetector"]
 shape = SubResource("CircleShape2D_3fufu")
 debug_color = Color(0.67451, 0.505882, 0, 0.419608)
-
-[node name="Camera2D" type="Camera2D" parent="PlayerBody"]
