@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd3idmu5desgr"]
+[gd_scene load_steps=7 format=3 uid="uid://dd3idmu5desgr"]
 
 [ext_resource type="Script" path="res://aurimas_test.gd" id="1_ftx5x"]
 [ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="1_m2nor"]
 [ext_resource type="Script" path="res://PathFollow2D.gd" id="2_do3km"]
 [ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="3_qrjgs"]
+[ext_resource type="PackedScene" uid="uid://donb8d06i1yde" path="res://hazard.tscn" id="5_41iw5"]
 
 [sub_resource type="Curve2D" id="Curve2D_2sdpc"]
 _data = {
@@ -41,3 +42,6 @@ position = Vector2(176, 315)
 
 [node name="Player" parent="." instance=ExtResource("3_qrjgs")]
 position = Vector2(511, 310)
+
+[node name="Hazard" parent="." instance=ExtResource("5_41iw5")]
+position = Vector2(264, 320)
