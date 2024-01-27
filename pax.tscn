@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dn6fvk1u5r0lk"]
 
-[ext_resource type="Script" path="res://pax.gd" id="1_ats0o"]
+[ext_resource type="Script" path="res://Pax.gd" id="1_ats0o"]
 [ext_resource type="Texture2D" uid="uid://ujksj13q8wox" path="res://art/placeholder-npc-stand.png" id="2_7exlu"]
 [ext_resource type="Texture2D" uid="uid://bh5n17pnh2gcb" path="res://art/placeholder-npc-walk-2.png" id="3_sf66j"]
 [ext_resource type="Texture2D" uid="uid://bs436pubgp563" path="res://art/placeholder-npc-walk-1.png" id="4_vicyd"]
@@ -37,7 +37,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_p0fsv")
-animation = &"stand"
+animation = &"walk"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 input_pickable = true
