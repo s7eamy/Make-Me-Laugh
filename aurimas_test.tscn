@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://dd3idmu5desgr"]
+[gd_scene load_steps=6 format=3 uid="uid://dd3idmu5desgr"]
 
-[ext_resource type="Script" path="res://aurimas_test.gd" id="1_ftx5x"]
 [ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="1_m2nor"]
 [ext_resource type="Script" path="res://PathFollow2D.gd" id="2_do3km"]
 [ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="3_qrjgs"]
@@ -13,7 +12,6 @@ _data = {
 point_count = 8
 
 [node name="test" type="Node"]
-script = ExtResource("1_ftx5x")
 
 [node name="PlaceholderBackground" type="ColorRect" parent="."]
 anchors_preset = 15
