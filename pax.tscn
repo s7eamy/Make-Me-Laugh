@@ -34,6 +34,7 @@ size = Vector2(24, 62)
 radius = 37.0
 
 [node name="Pax" type="Node2D" groups=["npcs"]]
+process_mode = 1
 script = ExtResource("1_ats0o")
 metadata/_edit_group_ = true
 
