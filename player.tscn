@@ -68,5 +68,3 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody/VisionDetector"]
 shape = SubResource("CircleShape2D_3fufu")
 debug_color = Color(0.67451, 0.505882, 0, 0.419608)
-
-[node name="Camera2D" type="Camera2D" parent="PlayerBody"]

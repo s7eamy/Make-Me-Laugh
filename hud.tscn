@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://blc5ndqbdce12"]
+[gd_scene load_steps=4 format=3 uid="uid://blc5ndqbdce12"]
 
 [ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="2_a4li0"]
 [ext_resource type="Script" path="res://Stopwatch.gd" id="3_oqgsn"]
+[ext_resource type="PackedScene" uid="uid://bm1o1qte6dcg8" path="res://title_screen.tscn" id="3_takpw"]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -21,3 +22,5 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("2_a4li0")
 script = ExtResource("3_oqgsn")
+
+[node name="TitleScreen" parent="." instance=ExtResource("3_takpw")]
