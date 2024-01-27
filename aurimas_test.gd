@@ -1,7 +1,8 @@
-extends PathFollow2D
+extends Node
 
-var speed = 100
+@onready var player = $Player
+@onready var npc = $Pax2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	progress += speed * delta
+	pass

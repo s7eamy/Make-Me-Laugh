@@ -1,15 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd3idmu5desgr"]
+[gd_scene load_steps=6 format=3 uid="uid://dd3idmu5desgr"]
 
+[ext_resource type="Script" path="res://aurimas_test.gd" id="1_ftx5x"]
 [ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="1_m2nor"]
 [ext_resource type="Script" path="res://PathFollow2D.gd" id="2_do3km"]
+[ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="3_qrjgs"]
 
 [sub_resource type="Curve2D" id="Curve2D_2sdpc"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1075, 334, 8.7307, -14.2449, -8.7307, 14.2449, 1072, 559, 0, 0, 0, 0, 745, 562)
+"points": PackedVector2Array(0, 0, 0, 0, 1088, 320, 0, 0, 0, 0, 1088, 512, 0, 0, 0, 0, 704, 512, 0, 0, 0, 0, 704, 384, 0, 0, 0, 0, 896, 384, 0, 0, 0, 0, 896, 448, 0, 0, 0, 0, 1088, 448, 0, 0, 0, 0, 1088, 320)
 }
-point_count = 3
+point_count = 8
 
 [node name="test" type="Node"]
+script = ExtResource("1_ftx5x")
 
 [node name="PlaceholderBackground" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -21,15 +24,20 @@ mouse_filter = 2
 color = Color(1, 0.45098, 0.372549, 1)
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(0, 1.93935)
-scale = Vector2(1, 0.994193)
 curve = SubResource("Curve2D_2sdpc")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(1076.83, 453.334)
-progress = 119.35
+position = Vector2(1088, 320)
 rotates = false
-loop = false
 script = ExtResource("2_do3km")
 
 [node name="Pax" parent="Path2D/PathFollow2D" instance=ExtResource("1_m2nor")]
+
+[node name="Pax" parent="." instance=ExtResource("1_m2nor")]
+position = Vector2(355, 309)
+
+[node name="Pax2" parent="." instance=ExtResource("1_m2nor")]
+position = Vector2(176, 315)
+
+[node name="Player" parent="." instance=ExtResource("3_qrjgs")]
+position = Vector2(511, 310)

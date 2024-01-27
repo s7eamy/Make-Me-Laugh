@@ -30,7 +30,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqln8"]
 size = Vector2(24, 62)
 
-[node name="Pax" type="Node2D"]
+[node name="Pax" type="Node2D" groups=["npcs"]]
 script = ExtResource("1_ats0o")
 metadata/_edit_group_ = true
 
@@ -40,10 +40,21 @@ sprite_frames = SubResource("SpriteFrames_p0fsv")
 animation = &"walk"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-3, -1)
 shape = SubResource("RectangleShape2D_yqln8")
 
-[connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_attacked"]
+[node name="ViewCone" type="Area2D" parent="."]
+show_behind_parent = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ViewCone"]
+build_mode = 1
+polygon = PackedVector2Array(192, -64, 192, 64, 0, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="ViewCone/CollisionPolygon2D"]
+modulate = Color(1, 1, 1, 0.345098)
+color = Color(0.54902, 0.54902, 0.54902, 1)
+polygon = PackedVector2Array(0, 0, 192, -64, 192, 64)
