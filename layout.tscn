@@ -1,0 +1,778 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmfislkfx45jo"]
+
+[ext_resource type="Texture2D" uid="uid://dlg4hrgi0lc5x" path="res://art/environment/TopDownHouse_FloorsAndWalls.png" id="1_0plhw"]
+[ext_resource type="Texture2D" uid="uid://djw3w8n7qfwli" path="res://art/environment/global.png" id="1_6p7ys"]
+[ext_resource type="Texture2D" uid="uid://drmfk1qm34w0x" path="res://art/character/clown_sword.png" id="3_j5x3p"]
+[ext_resource type="Texture2D" uid="uid://d3q6g7m0tf754" path="res://art/character/mask_clown_red_sword.png" id="4_sl6u0"]
+[ext_resource type="Texture2D" uid="uid://cuu8ba1ltdgnk" path="res://art/character/sword.png" id="5_u68p2"]
+
+[node name="Layout" type="Node2D"]
+position = Vector2(0, 2)
+
+[node name="Screenshot" type="Node" parent="."]
+
+[node name="Table" type="Node" parent="Screenshot"]
+
+[node name="Sprite2D23" type="Sprite2D" parent="Screenshot/Table"]
+z_index = 2
+position = Vector2(45, 189.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(735.811, 1471.49, 32.3293, 16.7843)
+
+[node name="Sprite2D24" type="Sprite2D" parent="Screenshot/Table"]
+z_index = 2
+position = Vector2(67.25, 190.25)
+scale = Vector2(0.766667, 0.833333)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
+
+[node name="Sprite2D25" type="Sprite2D" parent="Screenshot/Table"]
+z_index = 2
+position = Vector2(22, 189.5)
+scale = Vector2(0.766667, 0.833333)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
+
+[node name="Sprite2D26" type="Sprite2D" parent="Screenshot/Table"]
+z_index = 1
+position = Vector2(38, 178.5)
+scale = Vector2(0.766667, 0.833333)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
+
+[node name="Sprite2D27" type="Sprite2D" parent="Screenshot/Table"]
+z_index = 1
+position = Vector2(52, 178.5)
+scale = Vector2(0.766667, 0.833333)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
+
+[node name="Sprite2D28" type="Sprite2D" parent="Screenshot/Table"]
+z_index = 2
+position = Vector2(46, 187.5)
+scale = Vector2(0.597619, 0.630952)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1536.18, 1602.14, 14.585, 14.1364)
+
+[node name="Walls" type="Node" parent="Screenshot"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(14, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(30, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(46, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(62, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(78, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(94, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(110, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(125, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(141, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(157, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(172, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(188, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(204, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(220, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(236, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(251, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(267, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(283, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D21" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(299, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Sprite2D22" type="Sprite2D" parent="Screenshot/Walls"]
+z_index = 1
+position = Vector2(315, 147.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(336.106, 764.163, 16, 35.348)
+
+[node name="Bar Counter" type="Node" parent="Screenshot"]
+
+[node name="Sprite2D4" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+position = Vector2(146, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+position = Vector2(158, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+position = Vector2(170, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+position = Vector2(122, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+position = Vector2(134, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5, 19.621)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+position = Vector2(182, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+position = Vector2(194, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 5
+y_sort_enabled = true
+position = Vector2(206, 203)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(206, 195.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(206, 187.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(206, 178.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(206, 171.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 5
+y_sort_enabled = true
+position = Vector2(110, 203.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 4
+y_sort_enabled = true
+position = Vector2(110, 196)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(110, 188)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(110, 179)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Sprite2D21" type="Sprite2D" parent="Screenshot/Bar Counter"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(110, 172)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
+
+[node name="Fireplace" type="Sprite2D" parent="Screenshot"]
+z_index = 5
+position = Vector2(158, 166.5)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(241.607, 2272.7, 30.0004, 32.2314)
+
+[node name="Floor2" type="Node" parent="Screenshot"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(37, 187.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(99, 187.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(99, 233.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(37, 233.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(161, 187.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(223, 187.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(223, 233.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(161, 233.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(37, 279.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(99, 279.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(99, 325.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(37, 325.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(161, 279.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(223, 279.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(223, 325.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(161, 325.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(285, 187.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(285, 233.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(285, 279.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(285, 325.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D21" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(99, 371.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D22" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(37, 371.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D23" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(223, 371.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D24" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(161, 371.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Sprite2D25" type="Sprite2D" parent="Screenshot/Floor2"]
+position = Vector2(285, 371.5)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(17, 81, 62, 46)
+
+[node name="Clown" type="Node" parent="."]
+
+[node name="Body" type="Sprite2D" parent="Clown"]
+z_index = 10
+position = Vector2(167, 233)
+texture = ExtResource("3_j5x3p")
+region_enabled = true
+region_rect = Rect2(235, 24, 10, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clown"]
+z_index = 10
+position = Vector2(167, 225)
+texture = ExtResource("4_sl6u0")
+region_enabled = true
+region_rect = Rect2(103, 11, 18, 15)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Clown"]
+z_index = 10
+position = Vector2(176, 228.5)
+texture = ExtResource("5_u68p2")
+region_enabled = true
+region_rect = Rect2(117, 16, 10, 11)
+
+[node name="Backstage" type="Node" parent="."]
+
+[node name="Floor" type="Node" parent="Backstage"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 1
+position = Vector2(33, 32)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(12, 16, 66, 60)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 1
+position = Vector2(96, 32)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(18, 16, 60, 60)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 1
+position = Vector2(156, 32)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(18, 16, 60, 60)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Backstage/Floor"]
+position = Vector2(188, 53)
+scale = Vector2(-1, -1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(12, 80, 4, 18)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Backstage/Floor"]
+position = Vector2(188, 8)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(18, 12, 14, 4)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Backstage/Floor"]
+position = Vector2(188, 24)
+scale = Vector2(-1, -1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(12, 110, 4, 18)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(188, -13)
+rotation = -1.5708
+scale = Vector2(-1, -1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(18, 12, 30, 4)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(188, -29)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(272, 12, 4, 8)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(95.5, -31)
+scale = Vector2(6.1, 1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(18, 12, 30, 4)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(2, -13)
+rotation = -1.5708
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(18, 12, 30, 4)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(2, -29)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(12, 12, 4, 8)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(95, 64)
+scale = Vector2(-6.1, -1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(18, 12, 30, 4)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(2, 64)
+scale = Vector2(-1, -1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(272, 12, 4, 4)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(2, 60)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(12, 78, 4, 4)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Backstage/Floor"]
+z_index = 2
+position = Vector2(188, 63)
+scale = Vector2(-1, -1)
+texture = ExtResource("1_0plhw")
+region_enabled = true
+region_rect = Rect2(12, 12, 4, 6)
+
+[node name="Walls" type="Node" parent="Backstage"]
+
+[node name="Sprite2D22" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(12, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D23" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(28, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D24" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(44, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D25" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(60, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D26" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(76, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D27" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(92, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D28" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(108, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D29" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(124, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D30" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(140, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D31" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(156, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D32" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(172, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 16, 32)
+
+[node name="Sprite2D33" type="Sprite2D" parent="Backstage/Walls"]
+position = Vector2(183, -13)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(624, 544, 6, 32)
+
+[node name="TV" type="Node" parent="Backstage"]
+
+[node name="Television" type="Sprite2D" parent="Backstage/TV"]
+z_index = 6
+position = Vector2(30.1, -1.3)
+scale = Vector2(0.7, 0.67)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1636, 1644, 26, 20)
+
+[node name="Screen" type="Sprite2D" parent="Backstage/TV"]
+z_index = 6
+position = Vector2(30.1, -1.3)
+scale = Vector2(0.7, 0.67)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1670, 1648, 22, 12)
+
+[node name="TV Table" type="Sprite2D" parent="Backstage"]
+z_index = 5
+position = Vector2(29, 6)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1540, 1908, 22, 12)
+
+[node name="TV Chair" type="Sprite2D" parent="Backstage"]
+z_index = 5
+position = Vector2(29, 26)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(996, 1936, 20, 16)
+
+[node name="Mirror Table" type="Sprite2D" parent="Backstage"]
+z_index = 5
+position = Vector2(120.4, -0.2)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(884, 1780, 24, 28)
+
+[node name="Mirror Chair" type="Sprite2D" parent="Backstage"]
+z_index = 5
+position = Vector2(121.4, 15.8)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(914, 1762, 12, 14)
+
+[node name="Lamp1" type="Sprite2D" parent="Backstage"]
+z_index = 5
+position = Vector2(54, -2)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1440, 1588, 14, 28)
+
+[node name="Lamp2" type="Sprite2D" parent="Backstage"]
+z_index = 5
+position = Vector2(98, -2)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1440, 1588, 14, 28)
+
+[node name="Sofa1" type="Sprite2D" parent="Backstage"]
+z_index = 5
+position = Vector2(76, 4)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(801, 1822, 31, 18)
