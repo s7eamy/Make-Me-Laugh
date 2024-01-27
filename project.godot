@@ -13,3 +13,10 @@ config_version=5
 config/name="Make Me Laugh"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=760
+window/size/resizable=false
+window/stretch/mode="viewport"
