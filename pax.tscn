@@ -40,7 +40,8 @@ sprite_frames = SubResource("SpriteFrames_p0fsv")
 animation = &"walk"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 2
+collision_layer = 256
+collision_mask = 19
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -49,6 +50,8 @@ shape = SubResource("RectangleShape2D_yqln8")
 
 [node name="ViewCone" type="Area2D" parent="."]
 show_behind_parent = true
+collision_layer = 512
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ViewCone"]
 build_mode = 1
