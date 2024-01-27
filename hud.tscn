@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://blc5ndqbdce12"]
+[gd_scene load_steps=3 format=3 uid="uid://blc5ndqbdce12"]
 
 [ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="2_a4li0"]
-[ext_resource type="Script" path="res://TimeTracker.gd" id="2_u1na7"]
 [ext_resource type="Script" path="res://Stopwatch.gd" id="3_oqgsn"]
 
 [node name="HUD" type="CanvasLayer"]
@@ -16,9 +15,6 @@ offset_bottom = 21.0
 grow_horizontal = 2
 theme = ExtResource("2_a4li0")
 text = "Kill all the ungrateful audience members!"
-
-[node name="TimeTracker" type="Node" parent="."]
-script = ExtResource("2_u1na7")
 
 [node name="Stopwatch" type="Label" parent="."]
 offset_right = 40.0
