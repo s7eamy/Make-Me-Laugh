@@ -44,4 +44,17 @@ func _process(delta):
 		$ViewCone.rotation = direction.angle()
 	else:
 		pass
+
+func check_being_in_vision():
+	var vision_cones = %VisionDetector.get_overlapping_areas()
+
+	# self ViewCone is overlapping with self VisionDetector, so exclude it 
+	var self_index = vision_cones.find($ViewCone)
+	if self_index != -1:
+		vision_cones.remove_at(self_index)
 	
+	for vision in vision_cones:
+		if vision.is_in_group("PaxVision"):
+			print('Pax in vision of: ' + vision.get_parent().name)
+			# TODO: invoke gameover
+			break

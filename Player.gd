@@ -1,6 +1,6 @@
 extends Node2D
 
-signal attack
+signal game_over_failure(failure_message)
 
 var is_attacking = false
 var is_activating = false
@@ -9,7 +9,6 @@ var activatable_target
 
 func _physics_process(_delta):
 	get_input()
-	#check_being_in_vision()
 	resolve_targets()
 	handle_attack()
 	handle_activate()
@@ -17,13 +16,6 @@ func _physics_process(_delta):
 func get_input():
 	is_attacking = Input.is_action_just_pressed("attack")
 	is_activating = Input.is_action_just_pressed("activate")
-
-func check_being_in_vision():
-	var areas = %VisionDetector.get_overlapping_areas()
-	
-	for area in areas:
-		if area.is_in_group("PaxVision"):
-			print('In vision of: ' + area.name)
 
 func resolve_targets():
 	attackable_target = null
@@ -52,8 +44,25 @@ func handle_attack():
 		return
 	
 	if attackable_target && attackable_target.get_parent() && attackable_target.get_parent().has_method("_on_attacked"):
-		#check_being_in_vision()
+		if attackable_target.get_parent().has_method("check_being_in_vision"):
+			attackable_target.get_parent().check_being_in_vision()
+		check_being_in_vision(attackable_target)
+		
 		attackable_target.get_parent()._on_attacked()
+
+func check_being_in_vision(target):
+	var vision_cones = %VisionDetector.get_overlapping_areas()
+
+	# check if others have vision on player, excluding the attacked target
+	var target_index = vision_cones.find(target.get_parent().get_node("ViewCone"))
+	if target_index != -1:
+		vision_cones.remove_at(target_index)
+	
+	for vision in vision_cones:
+		if vision.is_in_group("PaxVision"):
+			var failure_message = "Player in vision of: " + vision.get_parent().name
+			emit_signal("game_over_failure", failure_message)
+			break
 
 func handle_activate():
 	if not is_activating:
