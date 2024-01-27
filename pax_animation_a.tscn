@@ -1,6 +1,7 @@
 [gd_scene load_steps=211 format=3 uid="uid://d3dovpi5mlqnt"]
 
 [ext_resource type="Texture2D" uid="uid://dbvhpklebs4" path="res://art/character/char_all.png" id="1_5aobk"]
+[ext_resource type="Script" path="res://pax_animation_a.gd" id="1_b5cwo"]
 [ext_resource type="Texture2D" uid="uid://c3fkrd4mwpk6s" path="res://art/character/basic.png" id="2_t3cak"]
 [ext_resource type="Texture2D" uid="uid://1w0x7ixsugem" path="res://art/character/gentleman.png" id="3_qrdom"]
 [ext_resource type="Texture2D" uid="uid://3qi5rtqk7g4h" path="res://art/character/pants.png" id="4_nnedh"]
@@ -1621,7 +1622,9 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="PaxAnimationA" type="Node"]
+[node name="PaxAnimationA" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_b5cwo")
 
 [node name="Body" type="AnimatedSprite2D" parent="."]
 texture_repeat = 1
@@ -1632,7 +1635,9 @@ frame_progress = 0.313516
 [node name="Shirt" type="AnimatedSprite2D" parent="."]
 texture_repeat = 1
 sprite_frames = SubResource("SpriteFrames_8y2hr")
-animation = &"WalkUp"
+animation = &"IdleDown"
+autoplay = "IdleDown"
+frame_progress = 0.107799
 
 [node name="Hair" type="AnimatedSprite2D" parent="."]
 texture_repeat = 1
@@ -1647,4 +1652,6 @@ animation = &"WalkUp"
 [node name="Shoes" type="AnimatedSprite2D" parent="."]
 texture_repeat = 1
 sprite_frames = SubResource("SpriteFrames_v6sqo")
-animation = &"WalkUp"
+animation = &"IdleDown"
+autoplay = "IdleDown"
+frame_progress = 0.396809

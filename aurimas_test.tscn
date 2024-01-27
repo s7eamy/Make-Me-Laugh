@@ -34,12 +34,6 @@ script = ExtResource("2_do3km")
 
 [node name="Pax" parent="Path2D/PathFollow2D" instance=ExtResource("1_m2nor")]
 
-[node name="Pax" parent="." instance=ExtResource("1_m2nor")]
-position = Vector2(355, 309)
-
-[node name="Pax2" parent="." instance=ExtResource("1_m2nor")]
-position = Vector2(176, 315)
-
 [node name="Player" parent="." instance=ExtResource("3_qrjgs")]
 position = Vector2(511, 310)
 
