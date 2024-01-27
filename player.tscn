@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccxfekdwud7n6"]
+[gd_scene load_steps=7 format=3 uid="uid://ccxfekdwud7n6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_u1ev2"]
 [ext_resource type="Script" path="res://player_movement.gd" id="2_oy5m2"]
@@ -12,6 +12,9 @@ radius = 74.0608
 [sub_resource type="CircleShape2D" id="CircleShape2D_wsl0p"]
 radius = 99.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fufu"]
+radius = 37.0
+
 [node name="Player" type="Node2D"]
 script = ExtResource("1_u1ev2")
 
@@ -22,10 +25,11 @@ input_pickable = true
 script = ExtResource("2_oy5m2")
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="PlayerBody"]
+unique_name_in_owner = true
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_wwvhx")
 
-[node name="Polygon2D" type="Polygon2D" parent="PlayerBody"]
+[node name="PlayerPolygon" type="Polygon2D" parent="PlayerBody"]
 position = Vector2(-25, -24)
 color = Color(0.596078, 0.894118, 0.745098, 1)
 polygon = PackedVector2Array(0, 0, 50, 0, 50, 49, 0, 49)
@@ -49,3 +53,13 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody/ActivateArea"]
 shape = SubResource("CircleShape2D_wsl0p")
 debug_color = Color(0, 0.709804, 0.427451, 0.419608)
+
+[node name="VisionDetector" type="Area2D" parent="PlayerBody"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 512
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody/VisionDetector"]
+shape = SubResource("CircleShape2D_3fufu")
+debug_color = Color(0.67451, 0.505882, 0, 0.419608)

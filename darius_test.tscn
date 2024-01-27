@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3ll8c7vcaqsk"]
+
+[ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="1_hyvnl"]
+[ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="2_qpif2"]
+
+[node name="Darius-test" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_hyvnl")]
+position = Vector2(167, 268)
+
+[node name="Pax" parent="." instance=ExtResource("2_qpif2")]
+position = Vector2(630, 256)
+
+[node name="Pax2" parent="." instance=ExtResource("2_qpif2")]
+position = Vector2(615, 299)
+
+[node name="Pax3" parent="." instance=ExtResource("2_qpif2")]
+position = Vector2(390, 206)
+
+[connection signal="attack" from="Player" to="Pax" method="_on_attacked"]
