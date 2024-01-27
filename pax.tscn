@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn6fvk1u5r0lk"]
+[gd_scene load_steps=7 format=3 uid="uid://dn6fvk1u5r0lk"]
 
 [ext_resource type="Script" path="res://pax.gd" id="1_ats0o"]
 [ext_resource type="Texture2D" uid="uid://dqtm31ihyjefy" path="res://art/placeholder-1.png" id="1_vojkr"]
-[ext_resource type="Texture2D" uid="uid://1qn22wpy07ck" path="res://art/placeholder-2.png" id="2_x7yic"]
+[ext_resource type="Texture2D" uid="uid://bh5n17pnh2gcb" path="res://art/placeholder-npc-walk-2.png" id="3_sf66j"]
+[ext_resource type="Texture2D" uid="uid://bs436pubgp563" path="res://art/placeholder-npc-walk-1.png" id="4_vicyd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p0fsv"]
 animations = [{
@@ -16,7 +17,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x7yic")
+"texture": ExtResource("3_sf66j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vicyd")
 }],
 "loop": true,
 "name": &"walk",
@@ -33,12 +37,13 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_p0fsv")
-animation = &"stand"
+animation = &"walk"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-3, -1)
 shape = SubResource("RectangleShape2D_yqln8")
 
-[connection signal="mouse_exited" from="StaticBody2D" to="." method="_on_attacked"]
+[connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_attacked"]
