@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn6fvk1u5r0lk"]
+[gd_scene load_steps=8 format=3 uid="uid://dn6fvk1u5r0lk"]
 
 [ext_resource type="Script" path="res://Pax.gd" id="1_ats0o"]
 [ext_resource type="Texture2D" uid="uid://ujksj13q8wox" path="res://art/placeholder-npc-stand.png" id="2_7exlu"]
@@ -30,6 +30,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqln8"]
 size = Vector2(24, 62)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_sg0qk"]
+radius = 37.0
+
 [node name="Pax" type="Node2D" groups=["npcs"]]
 script = ExtResource("1_ats0o")
 metadata/_edit_group_ = true
@@ -48,7 +51,7 @@ input_pickable = true
 position = Vector2(-3, -1)
 shape = SubResource("RectangleShape2D_yqln8")
 
-[node name="ViewCone" type="Area2D" parent="."]
+[node name="ViewCone" type="Area2D" parent="." groups=["PaxVision"]]
 show_behind_parent = true
 collision_layer = 512
 collision_mask = 0
@@ -61,3 +64,13 @@ polygon = PackedVector2Array(192, -64, 192, 64, 0, 0)
 modulate = Color(1, 1, 1, 0.345098)
 color = Color(0.54902, 0.54902, 0.54902, 1)
 polygon = PackedVector2Array(0, 0, 192, -64, 192, 64)
+
+[node name="VisionDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 512
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionDetector"]
+shape = SubResource("CircleShape2D_sg0qk")
+debug_color = Color(0.67451, 0.505882, 0, 0.419608)
