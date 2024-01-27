@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://kywokndgrr2u"]
+[gd_scene load_steps=2 format=3 uid="uid://kywokndgrr2u"]
+
+[ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="1_gx1qx"]
 
 [node name="Main" type="Node"]
+
+[node name="PlaceholderBackground" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.45098, 0.372549, 1)
+
+[node name="Pax" parent="." instance=ExtResource("1_gx1qx")]
+position = Vector2(155, 132)
+
+[node name="Pax2" parent="." instance=ExtResource("1_gx1qx")]
+position = Vector2(440, 446)
+
+[node name="Pax3" parent="." instance=ExtResource("1_gx1qx")]
+position = Vector2(806, 440)

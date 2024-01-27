@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dn6fvk1u5r0lk"]
+
+[ext_resource type="Script" path="res://pax.gd" id="1_ats0o"]
+[ext_resource type="Texture2D" uid="uid://dqtm31ihyjefy" path="res://art/placeholder-1.png" id="1_vojkr"]
+[ext_resource type="Texture2D" uid="uid://1qn22wpy07ck" path="res://art/placeholder-2.png" id="2_x7yic"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p0fsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vojkr")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x7yic")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqln8"]
+size = Vector2(24, 62)
+
+[node name="Pax" type="Node2D"]
+script = ExtResource("1_ats0o")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_p0fsv")
+animation = &"stand"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, -1)
+shape = SubResource("RectangleShape2D_yqln8")
+
+[connection signal="mouse_exited" from="StaticBody2D" to="." method="_on_attacked"]
