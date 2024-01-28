@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch2h23b51hlrj"]
 
 [ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="1_bddav"]
-[ext_resource type="Script" path="res://game_over_screen.gd" id="1_h25xm"]
+[ext_resource type="Script" path="res://menu_end_screen.gd" id="1_h25xm"]
 
 [node name="game_over_screen" type="CanvasLayer"]
 script = ExtResource("1_h25xm")

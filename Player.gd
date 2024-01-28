@@ -1,5 +1,8 @@
 extends Node2D
 
+#func _ready():
+	#set_process(false)
+
 signal game_over_failure(failure_message)
 
 var is_attacking = false
@@ -61,7 +64,8 @@ func check_being_in_vision(target):
 	for vision in vision_cones:
 		if vision.is_in_group("PaxVision"):
 			var failure_message = "Player in vision of: " + vision.get_parent().name
-			emit_signal("game_over_failure", failure_message)
+			#emit_signal("game_over_failure", failure_message)
+			Global._on_game_over_failure(failure_message)
 			break
 
 func handle_activate():
