@@ -28,6 +28,7 @@ theme_override_constants/outline_size = 5
 script = ExtResource("3_oqgsn")
 
 [node name="TitleScreen" parent="." instance=ExtResource("3_takpw")]
+visible = false
 
 [node name="AttackLabel" type="Label" parent="."]
 anchors_preset = 7

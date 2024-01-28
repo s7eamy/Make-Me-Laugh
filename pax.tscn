@@ -4,17 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://d3dovpi5mlqnt" path="res://pax_animation_a.tscn" id="2_1ft3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqln8"]
-size = Vector2(24, 62)
+size = Vector2(17, 17)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sg0qk"]
-radius = 37.0
+radius = 12.0
 
 [node name="Pax" type="Node2D" groups=["npcs"]]
 process_mode = 1
 script = ExtResource("1_ats0o")
-metadata/_edit_group_ = true
 
 [node name="PaxAnimationA" parent="." instance=ExtResource("2_1ft3y")]
+position = Vector2(0, -4)
 scale = Vector2(1, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -23,7 +23,7 @@ collision_mask = 19
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-3, -1)
+position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_yqln8")
 
 [node name="ViewCone" type="Area2D" parent="." groups=["PaxVision"]]
@@ -33,12 +33,12 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ViewCone"]
 build_mode = 1
-polygon = PackedVector2Array(192, -64, 192, 64, 0, 0)
+polygon = PackedVector2Array(85, -29, 86, 29, 0, 0)
 
 [node name="Polygon2D" type="Polygon2D" parent="ViewCone/CollisionPolygon2D"]
 modulate = Color(1, 1, 1, 0.345098)
 color = Color(0.54902, 0.54902, 0.54902, 1)
-polygon = PackedVector2Array(0, 0, 192, -64, 192, 64)
+polygon = PackedVector2Array(0, 0, 86, -28, 87, 29)
 
 [node name="VisionDetector" type="Area2D" parent="."]
 unique_name_in_owner = true

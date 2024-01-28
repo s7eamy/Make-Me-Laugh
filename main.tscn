@@ -810,21 +810,22 @@ region_rect = Rect2(2086, 1155, 19, 22)
 
 [node name="Pax" parent="." instance=ExtResource("1_gx1qx")]
 z_index = 10
-position = Vector2(121, 3)
+position = Vector2(121, 9)
 viewcone_rotation = 270
 idle_direction = "up"
 
 [node name="Pax2" parent="." instance=ExtResource("1_gx1qx")]
 z_index = 10
-position = Vector2(30, 9)
+position = Vector2(30, 16)
 viewcone_rotation = 270
 idle_direction = "up"
 
 [node name="Pax3" parent="." instance=ExtResource("1_gx1qx")]
 z_index = 10
-position = Vector2(162, 6)
+position = Vector2(162, 12)
 viewcone_rotation = 180
 idle_direction = "left"
 
 [node name="Player" parent="." instance=ExtResource("4_r504u")]
+z_index = 11
 position = Vector2(162, 6)

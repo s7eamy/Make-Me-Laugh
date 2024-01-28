@@ -6,16 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://c0wsbw3ly2ku6" path="res://player_animation.tscn" id="4_p4rk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwvhx"]
-size = Vector2(48, 60)
+size = Vector2(17, 19)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_twqgg"]
-radius = 74.0608
+radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wsl0p"]
-radius = 99.0
+radius = 33.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3fufu"]
-radius = 37.0
+radius = 12.0
 
 [node name="Player" type="Node2D"]
 process_mode = 1
@@ -28,15 +28,17 @@ input_pickable = true
 script = ExtResource("2_oy5m2")
 
 [node name="PlayerAnimation" parent="PlayerBody" instance=ExtResource("4_p4rk2")]
-position = Vector2(2, -13)
+position = Vector2(1, -3)
+scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerBody"]
+zoom = Vector2(3, 3)
 
 [node name="HUD" parent="PlayerBody/Camera2D" instance=ExtResource("3_a7sgt")]
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="PlayerBody"]
 unique_name_in_owner = true
-position = Vector2(-1, 0)
+position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_wwvhx")
 
 [node name="AttackArea" type="Area2D" parent="PlayerBody"]
