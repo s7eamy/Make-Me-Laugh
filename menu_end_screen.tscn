@@ -1,12 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch2h23b51hlrj"]
 
 [ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="1_bddav"]
-[ext_resource type="Script" path="res://game_over_screen.gd" id="1_h25xm"]
+[ext_resource type="Script" path="res://menu_end_screen.gd" id="1_h25xm"]
 
 [node name="game_over_screen" type="CanvasLayer"]
+process_mode = 3
+layer = 3
 script = ExtResource("1_h25xm")
 
-[node name="gameOverLabel" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.301961)
+
+[node name="GameOverLabel" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -22,7 +32,7 @@ text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="deathMessageLabel" type="Label" parent="."]
+[node name="GameOverReasonLabel" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

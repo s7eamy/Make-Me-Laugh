@@ -9,7 +9,7 @@ size = Vector2(17, 17)
 [sub_resource type="CircleShape2D" id="CircleShape2D_sg0qk"]
 radius = 12.0
 
-[node name="Pax" type="Node2D" groups=["npcs"]]
+[node name="Pax" type="Node2D" groups=["Paxs"]]
 process_mode = 1
 script = ExtResource("1_ats0o")
 

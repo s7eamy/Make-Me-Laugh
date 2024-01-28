@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://blc5ndqbdce12"]
+[gd_scene load_steps=5 format=3 uid="uid://blc5ndqbdce12"]
 
 [ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="2_a4li0"]
+[ext_resource type="PackedScene" uid="uid://bm1o1qte6dcg8" path="res://menu_start_screen.tscn" id="3_k74jy"]
 [ext_resource type="Script" path="res://Stopwatch.gd" id="3_oqgsn"]
-[ext_resource type="PackedScene" uid="uid://bm1o1qte6dcg8" path="res://title_screen.tscn" id="3_takpw"]
+[ext_resource type="Script" path="res://score.gd" id="4_gbmwl"]
 
 [node name="HUD" type="CanvasLayer"]
+process_mode = 1
 
 [node name="TaskLabel" type="Label" parent="."]
 anchors_preset = 5
@@ -20,15 +22,28 @@ theme_override_constants/outline_size = 5
 text = "Kill all the ungrateful audience members!"
 
 [node name="Stopwatch" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 51.0
 theme = ExtResource("2_a4li0")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 script = ExtResource("3_oqgsn")
 
-[node name="TitleScreen" parent="." instance=ExtResource("3_takpw")]
-visible = false
+[node name="ScoreLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 315.0
+offset_bottom = 105.0
+theme = ExtResource("2_a4li0")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Left:"
+script = ExtResource("4_gbmwl")
+
+[node name="TitleScreen" parent="." instance=ExtResource("3_k74jy")]
 
 [node name="AttackLabel" type="Label" parent="."]
 anchors_preset = 7

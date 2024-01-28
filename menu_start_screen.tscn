@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bm1o1qte6dcg8"]
 
-[ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="1_3rgda"]
-[ext_resource type="Script" path="res://title_screen.gd" id="1_esmi2"]
+[ext_resource type="Script" path="res://menu_start_screen.gd" id="1_rey3u"]
+[ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="2_lyh23"]
 
 [node name="TitleScreen" type="CanvasLayer"]
-script = ExtResource("1_esmi2")
+process_mode = 3
+script = ExtResource("1_rey3u")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -25,7 +26,7 @@ offset_left = -34.5
 offset_right = 34.5
 offset_bottom = 41.0
 grow_horizontal = 2
-theme = ExtResource("1_3rgda")
+theme = ExtResource("2_lyh23")
 theme_override_font_sizes/font_size = 48
 text = "the
 "
@@ -39,7 +40,7 @@ offset_top = 50.0
 offset_right = 119.5
 offset_bottom = 132.0
 grow_horizontal = 2
-theme = ExtResource("1_3rgda")
+theme = ExtResource("2_lyh23")
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 96
 text = "Killing"
@@ -55,7 +56,7 @@ offset_top = 150.0
 offset_right = 119.5
 offset_bottom = 232.0
 grow_horizontal = 2
-theme = ExtResource("1_3rgda")
+theme = ExtResource("2_lyh23")
 theme_override_font_sizes/font_size = 96
 text = "Joke"
 horizontal_alignment = 1
@@ -73,7 +74,7 @@ offset_right = 59.0
 offset_bottom = 124.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_3rgda")
+theme = ExtResource("2_lyh23")
 text = "Start"
 
 [node name="QuitButton" type="Button" parent="."]
@@ -88,7 +89,7 @@ offset_right = 59.0
 offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_3rgda")
+theme = ExtResource("2_lyh23")
 text = "Quit"
 
 [connection signal="button_down" from="StartButton" to="." method="_on_start_button_button_down"]
