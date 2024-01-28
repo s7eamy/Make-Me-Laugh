@@ -15,6 +15,7 @@ script = ExtResource("1_ats0o")
 metadata/_edit_group_ = true
 
 [node name="PaxAnimationA" parent="." instance=ExtResource("2_1ft3y")]
+scale = Vector2(1, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 256

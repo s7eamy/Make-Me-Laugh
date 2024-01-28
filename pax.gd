@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var animator_node = $PaxAnimationA
+@export var viewcone_rotation = 0
+@export var idle_direction = "down"
 
 # if pax is moving, these variables are needed to set viewcone and animation correctly
 var path
@@ -11,6 +13,8 @@ func _ready():
 	if get_parent().name == "PathFollow2D":
 		path = get_parent()
 		last_position = path.position
+	$ViewCone.rotation = deg_to_rad(viewcone_rotation)
+	play_animation("idle", idle_direction)
 
 func _on_attacked() -> void:
 	print("Participant " + name + " was attacked!")

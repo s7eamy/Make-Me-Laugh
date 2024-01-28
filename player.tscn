@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_u1ev2"]
 [ext_resource type="Script" path="res://player_movement.gd" id="2_oy5m2"]
-[ext_resource type="PackedScene" uid="uid://blc5ndqbdce12" path="res://hud.tscn" id="3_a7sgt"]
+[ext_resource type="PackedScene" path="res://hud.tscn" id="3_a7sgt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwvhx"]
 size = Vector2(50, 49)
@@ -37,6 +37,7 @@ shape = SubResource("RectangleShape2D_wwvhx")
 
 [node name="PlayerPolygon" type="Polygon2D" parent="PlayerBody"]
 position = Vector2(-25, -24)
+scale = Vector2(0.3, 0.3)
 color = Color(0.596078, 0.894118, 0.745098, 1)
 polygon = PackedVector2Array(0, 0, 50, 0, 50, 49, 0, 49)
 
