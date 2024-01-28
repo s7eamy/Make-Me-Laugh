@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bs5puxtafo8xx"]
+[gd_scene load_steps=10 format=3 uid="uid://7sfl064lrikn"]
 
+[ext_resource type="Script" path="res://trailer.gd" id="1_10ipy"]
 [ext_resource type="Texture2D" uid="uid://dlg4hrgi0lc5x" path="res://art/environment/TopDownHouse_FloorsAndWalls.png" id="1_iw34t"]
 [ext_resource type="Texture2D" uid="uid://djw3w8n7qfwli" path="res://art/environment/global.png" id="2_o0pfm"]
 [ext_resource type="PackedScene" uid="uid://d3dovpi5mlqnt" path="res://pax_animation_a.tscn" id="3_s2gul"]

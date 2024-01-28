@@ -1065,6 +1065,7 @@ animation = &"AttackUp"
 autoplay = "IdleDown"
 
 [node name="Sword" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_7i11o")
 animation = &"AttackUp"
 
