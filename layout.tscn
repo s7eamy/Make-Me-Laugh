@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://dmfislkfx45jo"]
+[gd_scene load_steps=21 format=3 uid="uid://dmfislkfx45jo"]
 
 [ext_resource type="Texture2D" uid="uid://dlg4hrgi0lc5x" path="res://art/environment/TopDownHouse_FloorsAndWalls.png" id="1_0plhw"]
 [ext_resource type="Texture2D" uid="uid://djw3w8n7qfwli" path="res://art/environment/global.png" id="1_6p7ys"]
 [ext_resource type="Texture2D" uid="uid://drmfk1qm34w0x" path="res://art/character/clown_sword.png" id="3_j5x3p"]
 [ext_resource type="Texture2D" uid="uid://d3q6g7m0tf754" path="res://art/character/mask_clown_red_sword.png" id="4_sl6u0"]
 [ext_resource type="Texture2D" uid="uid://cuu8ba1ltdgnk" path="res://art/character/sword.png" id="5_u68p2"]
+[ext_resource type="Texture2D" uid="uid://b651v5w3wemox" path="res://art/Lightning.png" id="6_83o50"]
+[ext_resource type="Texture2D" uid="uid://b24q3tygrf6x8" path="res://art/environment/Cord.png" id="7_0h0yj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp6jw"]
 atlas = ExtResource("1_6p7ys")
@@ -99,7 +101,7 @@ animations = [{
 }]
 
 [node name="Layout" type="Node2D"]
-position = Vector2(0, 2)
+position = Vector2(8.00005, 95)
 
 [node name="Screenshot" type="Node" parent="."]
 
@@ -107,14 +109,14 @@ position = Vector2(0, 2)
 
 [node name="Sprite2D23" type="Sprite2D" parent="Screenshot/Table"]
 z_index = 2
-position = Vector2(45, 189.5)
+position = Vector2(608, 65.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(735.811, 1471.49, 32.3293, 16.7843)
 
 [node name="Sprite2D24" type="Sprite2D" parent="Screenshot/Table"]
 z_index = 2
-position = Vector2(67.25, 190.25)
+position = Vector2(630.25, 66.25)
 scale = Vector2(0.766667, 0.833333)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -122,7 +124,7 @@ region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
 
 [node name="Sprite2D25" type="Sprite2D" parent="Screenshot/Table"]
 z_index = 2
-position = Vector2(22, 189.5)
+position = Vector2(585, 65.5)
 scale = Vector2(0.766667, 0.833333)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -130,7 +132,7 @@ region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
 
 [node name="Sprite2D26" type="Sprite2D" parent="Screenshot/Table"]
 z_index = 1
-position = Vector2(38, 178.5)
+position = Vector2(601, 54.5)
 scale = Vector2(0.766667, 0.833333)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -138,7 +140,7 @@ region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
 
 [node name="Sprite2D27" type="Sprite2D" parent="Screenshot/Table"]
 z_index = 1
-position = Vector2(52, 178.5)
+position = Vector2(615, 54.5)
 scale = Vector2(0.766667, 0.833333)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -146,7 +148,7 @@ region_rect = Rect2(1039.9, 1393.09, 15.1837, 15.7561)
 
 [node name="Sprite2D28" type="Sprite2D" parent="Screenshot/Table"]
 z_index = 2
-position = Vector2(46, 187.5)
+position = Vector2(609, 63.5)
 scale = Vector2(0.597619, 0.630952)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -156,140 +158,140 @@ region_rect = Rect2(1536.18, 1602.14, 14.585, 14.1364)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(14, 147.5)
+position = Vector2(577, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(30, 147.5)
+position = Vector2(593, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(46, 147.5)
+position = Vector2(609, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(62, 147.5)
+position = Vector2(625, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(78, 147.5)
+position = Vector2(641, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(94, 147.5)
+position = Vector2(657, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D9" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(110, 147.5)
+position = Vector2(673, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D10" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(125, 147.5)
+position = Vector2(688, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(141, 147.5)
+position = Vector2(704, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(157, 147.5)
+position = Vector2(720, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(172, 147.5)
+position = Vector2(735, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(188, 147.5)
+position = Vector2(751, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(204, 147.5)
+position = Vector2(767, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D16" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(220, 147.5)
+position = Vector2(783, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D17" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(236, 147.5)
+position = Vector2(799, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D18" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(251, 147.5)
+position = Vector2(814, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D19" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(267, 147.5)
+position = Vector2(830, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D20" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(283, 147.5)
+position = Vector2(846, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D21" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(299, 147.5)
+position = Vector2(862, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D22" type="Sprite2D" parent="Screenshot/Walls"]
 z_index = 1
-position = Vector2(315, 147.5)
+position = Vector2(878, 23.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336.106, 764.163, 16, 35.348)
@@ -298,49 +300,49 @@ region_rect = Rect2(336.106, 764.163, 16, 35.348)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
-position = Vector2(146, 203)
+position = Vector2(709, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
-position = Vector2(158, 203)
+position = Vector2(721, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
-position = Vector2(170, 203)
+position = Vector2(733, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
-position = Vector2(122, 203)
+position = Vector2(685, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 
 [node name="Sprite2D9" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
-position = Vector2(134, 203)
+position = Vector2(697, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5, 19.621)
 
 [node name="Sprite2D10" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
-position = Vector2(182, 203)
+position = Vector2(745, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
-position = Vector2(194, 203)
+position = Vector2(757, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -348,7 +350,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D12" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 5
 y_sort_enabled = true
-position = Vector2(206, 203)
+position = Vector2(769, 79)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -356,7 +358,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D13" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(206, 195.5)
+position = Vector2(769, 71.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -364,7 +366,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D14" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 3
 y_sort_enabled = true
-position = Vector2(206, 187.5)
+position = Vector2(769, 63.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -372,7 +374,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D15" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(206, 178.5)
+position = Vector2(769, 54.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -380,7 +382,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D16" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(206, 171.5)
+position = Vector2(769, 47.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -388,7 +390,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D17" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 5
 y_sort_enabled = true
-position = Vector2(110, 203.5)
+position = Vector2(673, 79.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -396,7 +398,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D18" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 4
 y_sort_enabled = true
-position = Vector2(110, 196)
+position = Vector2(673, 72)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -404,7 +406,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D19" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 3
 y_sort_enabled = true
-position = Vector2(110, 188)
+position = Vector2(673, 64)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -412,7 +414,7 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D20" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(110, 179)
+position = Vector2(673, 55)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
@@ -420,14 +422,14 @@ region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 [node name="Sprite2D21" type="Sprite2D" parent="Screenshot/Bar Counter"]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(110, 172)
+position = Vector2(673, 48)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(961.251, 1342.28, 16.5552, 19.621)
 
 [node name="Fireplace" type="Sprite2D" parent="Screenshot"]
 z_index = 5
-position = Vector2(158, 166.5)
+position = Vector2(721, 42.5)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(241.607, 2272.7, 30.0004, 32.2314)
@@ -435,151 +437,151 @@ region_rect = Rect2(241.607, 2272.7, 30.0004, 32.2314)
 [node name="Floor2" type="Node" parent="Screenshot"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(37, 187.5)
+position = Vector2(600, 63.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(99, 187.5)
+position = Vector2(662, 63.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(99, 233.5)
+position = Vector2(662, 109.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(37, 233.5)
+position = Vector2(600, 109.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(161, 187.5)
+position = Vector2(724, 63.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(223, 187.5)
+position = Vector2(786, 63.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(223, 233.5)
+position = Vector2(786, 109.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(161, 233.5)
+position = Vector2(724, 109.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D9" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(37, 279.5)
+position = Vector2(600, 155.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D10" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(99, 279.5)
+position = Vector2(662, 155.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(99, 325.5)
+position = Vector2(662, 201.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(37, 325.5)
+position = Vector2(600, 201.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(161, 279.5)
+position = Vector2(724, 155.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(223, 279.5)
+position = Vector2(786, 155.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(223, 325.5)
+position = Vector2(786, 201.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D16" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(161, 325.5)
+position = Vector2(724, 201.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D17" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(285, 187.5)
+position = Vector2(848, 63.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D18" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(285, 233.5)
+position = Vector2(848, 109.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D19" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(285, 279.5)
+position = Vector2(848, 155.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D20" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(285, 325.5)
+position = Vector2(848, 201.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D21" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(99, 371.5)
+position = Vector2(662, 247.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D22" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(37, 371.5)
+position = Vector2(600, 247.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D23" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(223, 371.5)
+position = Vector2(786, 247.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D24" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(161, 371.5)
+position = Vector2(724, 247.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Sprite2D25" type="Sprite2D" parent="Screenshot/Floor2"]
-position = Vector2(285, 371.5)
+position = Vector2(848, 247.5)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 81, 62, 46)
@@ -588,21 +590,21 @@ region_rect = Rect2(17, 81, 62, 46)
 
 [node name="Body" type="Sprite2D" parent="Clown"]
 z_index = 10
-position = Vector2(167, 233)
+position = Vector2(730, 109)
 texture = ExtResource("3_j5x3p")
 region_enabled = true
 region_rect = Rect2(235, 24, 10, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="Clown"]
 z_index = 10
-position = Vector2(167, 225)
+position = Vector2(730, 101)
 texture = ExtResource("4_sl6u0")
 region_enabled = true
 region_rect = Rect2(103, 11, 18, 15)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Clown"]
 z_index = 10
-position = Vector2(176, 228.5)
+position = Vector2(739, 104.5)
 texture = ExtResource("5_u68p2")
 region_enabled = true
 region_rect = Rect2(117, 16, 10, 11)
@@ -613,28 +615,28 @@ region_rect = Rect2(117, 16, 10, 11)
 
 [node name="Sprite2D" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 1
-position = Vector2(33, 32)
+position = Vector2(41.0001, 125)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(12, 16, 66, 60)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 1
-position = Vector2(96, 32)
+position = Vector2(104, 125)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(18, 16, 60, 60)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 1
-position = Vector2(156, 32)
+position = Vector2(164, 125)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(18, 16, 60, 60)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 1
-position = Vector2(188, 53)
+position = Vector2(196, 146)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -642,7 +644,7 @@ region_rect = Rect2(12, 80, 4, 18)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 1
-position = Vector2(188, 8)
+position = Vector2(196, 101)
 rotation = -1.5708
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
@@ -651,7 +653,7 @@ region_rect = Rect2(18, 12, 14, 4)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 1
-position = Vector2(188, 24)
+position = Vector2(196, 117)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -659,7 +661,7 @@ region_rect = Rect2(12, 110, 4, 18)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(188, -13)
+position = Vector2(196, 80)
 rotation = -1.5708
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
@@ -668,14 +670,14 @@ region_rect = Rect2(18, 12, 30, 4)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(188, -29)
+position = Vector2(196, 64)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(272, 12, 4, 8)
 
 [node name="Sprite2D9" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(95.5, -31)
+position = Vector2(103.5, 62)
 scale = Vector2(6.1, 1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -683,7 +685,7 @@ region_rect = Rect2(18, 12, 30, 4)
 
 [node name="Sprite2D10" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(2, -13)
+position = Vector2(10.0001, 80)
 rotation = -1.5708
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -691,14 +693,14 @@ region_rect = Rect2(18, 12, 30, 4)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(2, -29)
+position = Vector2(10.0001, 64)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(12, 12, 4, 8)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(95, 64)
+position = Vector2(103, 157)
 scale = Vector2(-6.1, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -706,7 +708,7 @@ region_rect = Rect2(18, 12, 30, 4)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(2, 64)
+position = Vector2(10.0001, 157)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -714,14 +716,14 @@ region_rect = Rect2(272, 12, 4, 4)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(2, 60)
+position = Vector2(10.0001, 153)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(12, 78, 4, 4)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Backstage/Floor"]
 z_index = 2
-position = Vector2(188, 63)
+position = Vector2(196, 156)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -730,73 +732,73 @@ region_rect = Rect2(12, 12, 4, 6)
 [node name="Walls" type="Node" parent="Backstage"]
 
 [node name="Sprite2D22" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(12, -13)
+position = Vector2(20.0001, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D23" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(28, -13)
+position = Vector2(36.0001, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D24" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(44, -13)
+position = Vector2(52.0001, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D25" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(60, -13)
+position = Vector2(68.0001, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D26" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(76, -13)
+position = Vector2(84.0001, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D27" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(92, -13)
+position = Vector2(100, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D28" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(108, -13)
+position = Vector2(116, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D29" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(124, -13)
+position = Vector2(132, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D30" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(140, -13)
+position = Vector2(148, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D31" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(156, -13)
+position = Vector2(164, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D32" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(172, -13)
+position = Vector2(180, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 16, 32)
 
 [node name="Sprite2D33" type="Sprite2D" parent="Backstage/Walls"]
-position = Vector2(183, -13)
+position = Vector2(191, 80)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(624, 544, 6, 32)
@@ -805,7 +807,7 @@ region_rect = Rect2(624, 544, 6, 32)
 
 [node name="Television" type="Sprite2D" parent="Backstage/TV"]
 z_index = 6
-position = Vector2(30, -1)
+position = Vector2(38.0001, 92)
 scale = Vector2(0.7, 0.67)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -813,43 +815,44 @@ region_rect = Rect2(1636, 1644, 26, 20)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Backstage/TV"]
 z_index = 7
-position = Vector2(30, -1)
+position = Vector2(38.0001, 92)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_8lu5k")
+autoplay = "default"
 
 [node name="TV Table" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(29, 6)
+position = Vector2(37.0001, 99)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1540, 1908, 22, 12)
 
 [node name="TV Chair" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(29, 26)
+position = Vector2(37.0001, 119)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(996, 1936, 20, 16)
 
 [node name="Mirror Table" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(120.4, -0.2)
-scale = Vector2(0.7, 0.7)
+position = Vector2(133.8, 92.6)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(884, 1780, 24, 28)
 
 [node name="Mirror Chair" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(121.4, 15.8)
-scale = Vector2(0.7, 0.7)
+position = Vector2(134.4, 114.8)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(914, 1762, 12, 14)
 
 [node name="Lamp1" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(54, -2)
+position = Vector2(62.0001, 91)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -857,7 +860,7 @@ region_rect = Rect2(1440, 1588, 14, 28)
 
 [node name="Lamp2" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(98, -2)
+position = Vector2(106, 91)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -865,14 +868,14 @@ region_rect = Rect2(1440, 1588, 14, 28)
 
 [node name="Sofa1" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(76, 4)
+position = Vector2(84.0001, 97)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(801, 1822, 31, 18)
 
 [node name="Lamp3" type="Sprite2D" parent="Backstage"]
 z_index = 5
-position = Vector2(177, -2)
+position = Vector2(185, 91)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -883,80 +886,80 @@ region_rect = Rect2(1536, 1029, 16, 27)
 [node name="Floor" type="Node" parent="Corridor"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(216, 40)
+position = Vector2(224, 133)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 82, 61, 45)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(277, 40)
+position = Vector2(285, 133)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 82, 61, 45)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(338, 40)
+position = Vector2(346, 133)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 82, 61, 45)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(388, 40)
+position = Vector2(396, 133)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(17, 82, 40, 45)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(220, 0)
+position = Vector2(228, 93)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 43, 62, 36)
 
 [node name="Sprite2D9" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(220, -36)
+position = Vector2(228, 57)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 41, 62, 38)
 
 [node name="Sprite2D10" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(282, 0)
+position = Vector2(290, 93)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 43, 62, 36)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(282, -36)
+position = Vector2(290, 57)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 41, 62, 38)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(344, 0)
+position = Vector2(352, 93)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 43, 62, 36)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(344, -36)
+position = Vector2(352, 57)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 41, 62, 38)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(391.5, -36)
+position = Vector2(399.5, 57)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 41, 33, 38)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Corridor/Floor"]
-position = Vector2(391.5, 0)
+position = Vector2(399.5, 93)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(209, 43, 33, 36)
 
 [node name="Sprite2D16" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(188, -57.535)
+position = Vector2(196, 35.465)
 rotation = -1.5708
 scale = Vector2(-2.29459, -1)
 texture = ExtResource("1_0plhw")
@@ -965,14 +968,14 @@ region_rect = Rect2(18, 12, 24, 4)
 
 [node name="Sprite2D17" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(188, -87)
+position = Vector2(196, 6)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(12, 12, 4, 8)
 
 [node name="Sprite2D18" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 3
-position = Vector2(298.75, -89)
+position = Vector2(306.75, 4)
 scale = Vector2(7.28333, 1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -980,7 +983,7 @@ region_rect = Rect2(18, 12, 30, 4)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(209.4, -16)
+position = Vector2(217.4, 77)
 scale = Vector2(0.6125, 1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -988,14 +991,14 @@ region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(278, -16)
+position = Vector2(286, 77)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(369, -16)
+position = Vector2(377, 77)
 scale = Vector2(1.21875, 1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -1003,14 +1006,14 @@ region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D19" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(410, -89)
+position = Vector2(418, 4)
 texture = ExtResource("1_0plhw")
 region_enabled = true
 region_rect = Rect2(272, 12, 4, 4)
 
 [node name="Sprite2D20" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(410, -36.1724)
+position = Vector2(418, 56.8276)
 rotation = -1.5708
 scale = Vector2(-4.28022, -1)
 texture = ExtResource("1_0plhw")
@@ -1019,7 +1022,7 @@ region_rect = Rect2(18, 12, 24, 4)
 
 [node name="Sprite2D21" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 1
-position = Vector2(410, 24)
+position = Vector2(418, 117)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -1027,7 +1030,7 @@ region_rect = Rect2(12, 110, 4, 18)
 
 [node name="Sprite2D22" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(297.258, 64)
+position = Vector2(305.258, 157)
 scale = Vector2(-7.38388, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -1035,7 +1038,7 @@ region_rect = Rect2(18, 12, 30, 4)
 
 [node name="Sprite2D23" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(410, 62)
+position = Vector2(418, 155)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -1043,7 +1046,7 @@ region_rect = Rect2(12, 12, 4, 8)
 
 [node name="Sprite2D24" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 1
-position = Vector2(410, 51.2365)
+position = Vector2(418, 144.237)
 scale = Vector2(-1, -0.801217)
 texture = ExtResource("1_0plhw")
 region_enabled = true
@@ -1051,7 +1054,7 @@ region_rect = Rect2(12, 80, 4, 18)
 
 [node name="Sprite2D25" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(227, -60)
+position = Vector2(235, 33)
 rotation = 1.5708
 scale = Vector2(0.872829, 1)
 texture = ExtResource("1_0plhw")
@@ -1060,7 +1063,7 @@ region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D26" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(360, -59.9314)
+position = Vector2(368, 33.0686)
 rotation = 1.5708
 scale = Vector2(0.871165, 1)
 texture = ExtResource("1_0plhw")
@@ -1069,7 +1072,7 @@ region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D27" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(386, -59.8613)
+position = Vector2(394, 33.1387)
 rotation = 1.5708
 scale = Vector2(0.873357, 1)
 texture = ExtResource("1_0plhw")
@@ -1078,7 +1081,7 @@ region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D28" type="Sprite2D" parent="Corridor/Floor"]
 z_index = 2
-position = Vector2(333, -59.9401)
+position = Vector2(341, 33.0599)
 rotation = 1.5708
 scale = Vector2(0.871437, 1)
 texture = ExtResource("1_0plhw")
@@ -1088,213 +1091,213 @@ region_rect = Rect2(16, 76, 64, 5)
 [node name="Walls" type="Node" parent="Corridor"]
 
 [node name="Sprite2D32" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(198, -71)
+position = Vector2(206, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D33" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(215, -71)
+position = Vector2(223, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D34" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(232, -71)
+position = Vector2(240, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D35" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(249, -71)
+position = Vector2(257, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D36" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(266, -71)
+position = Vector2(274, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D37" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(283, -71)
+position = Vector2(291, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D38" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(300, -71)
+position = Vector2(308, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D39" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(317, -71)
+position = Vector2(325, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D40" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(334, -71)
+position = Vector2(342, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D41" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(351, -71)
+position = Vector2(359, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D42" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(368, -71)
+position = Vector2(376, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D43" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(385, -71)
+position = Vector2(393, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 17, 32)
 
 [node name="Sprite2D44" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(401, -71)
+position = Vector2(409, 22)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(191, 1024, 15, 32)
 
 [node name="Sprite2D45" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(197, 2)
+position = Vector2(205, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D46" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(213, 2)
+position = Vector2(221, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D47" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(225, 2)
+position = Vector2(233, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 8, 32)
 
 [node name="Sprite2D48" type="Sprite2D" parent="Corridor/Walls"]
 z_index = 2
-position = Vector2(254, 2)
+position = Vector2(262, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D49" type="Sprite2D" parent="Corridor/Walls"]
 z_index = 2
-position = Vector2(270, 2)
+position = Vector2(278, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D50" type="Sprite2D" parent="Corridor/Walls"]
 z_index = 2
-position = Vector2(286, 2)
+position = Vector2(294, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D51" type="Sprite2D" parent="Corridor/Walls"]
 z_index = 2
-position = Vector2(302, 2)
+position = Vector2(310, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D52" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(338, 2)
+position = Vector2(346, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D53" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(354, 2)
+position = Vector2(362, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D54" type="Sprite2D" parent="Corridor/Walls"]
-position = Vector2(370, 2)
+position = Vector2(378, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D55" type="Sprite2D" parent="Corridor/Walls"]
 z_index = 2
-position = Vector2(386, 2)
+position = Vector2(394, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D56" type="Sprite2D" parent="Corridor/Walls"]
 z_index = 2
-position = Vector2(401, 2)
+position = Vector2(409, 95)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(336, 768, 14, 32)
 
 [node name="Toilet1" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(207, -56)
+position = Vector2(215, 37)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1633, 2107, 15, 22)
 
 [node name="Toilet2" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(347, -55)
+position = Vector2(355, 38)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1633, 2107, 15, 22)
 
 [node name="Toilet3" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(374, -55)
+position = Vector2(382, 38)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1633, 2107, 15, 22)
 
 [node name="Toilet4" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(399, -55)
+position = Vector2(407, 38)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1633, 2107, 15, 22)
 
 [node name="Sink1" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(254, -62)
+position = Vector2(262, 31)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1841, 2291, 15, 30)
 
 [node name="Sink2" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(278, -62)
+position = Vector2(286, 31)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1841, 2291, 15, 30)
 
 [node name="Sink3" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(301, -62)
+position = Vector2(309, 31)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(1841, 2291, 15, 30)
 
 [node name="Poster1" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(370, -1)
+position = Vector2(370, 92)
 scale = Vector2(0.757143, 0.74)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -1302,7 +1305,7 @@ region_rect = Rect2(2054, 1091, 35, 25)
 
 [node name="Poster2" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(207, -1)
+position = Vector2(215, 92)
 scale = Vector2(0.757143, 0.74)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
@@ -1310,8 +1313,82 @@ region_rect = Rect2(2055, 1059, 20, 26)
 
 [node name="Poster3" type="Sprite2D" parent="Corridor"]
 z_index = 5
-position = Vector2(278, -2)
+position = Vector2(286, 91)
 scale = Vector2(0.757143, 0.74)
 texture = ExtResource("1_6p7ys")
 region_enabled = true
 region_rect = Rect2(2086, 1155, 19, 22)
+
+[node name="Electricity Box" type="Node" parent="Corridor"]
+
+[node name="Box" type="Sprite2D" parent="Corridor/Electricity Box"]
+z_index = 5
+position = Vector2(402, 95)
+scale = Vector2(1.52321, 1.52107)
+texture = ExtResource("1_6p7ys")
+region_enabled = true
+region_rect = Rect2(1584, 2359, 7, 7)
+
+[node name="Lightning" type="Sprite2D" parent="Corridor/Electricity Box"]
+z_index = 6
+position = Vector2(401.5, 95)
+scale = Vector2(0.158334, 0.159722)
+texture = ExtResource("6_83o50")
+
+[node name="Electrical Cord" type="Node" parent="Corridor"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 4
+position = Vector2(408.5, 80)
+scale = Vector2(0.46875, 0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 4
+position = Vector2(402, 85.8919)
+rotation = 1.5708
+scale = Vector2(-0.425135, -0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 1
+position = Vector2(405, 7)
+scale = Vector2(0.734375, 0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 4
+position = Vector2(408.5, 80)
+scale = Vector2(0.46875, 0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 1
+position = Vector2(381, 7)
+scale = Vector2(0.734375, 0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 1
+position = Vector2(353.875, 7)
+scale = Vector2(0.804689, 0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 1
+position = Vector2(327, 7)
+scale = Vector2(0.804689, 0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 1
+position = Vector2(301, 7)
+scale = Vector2(0.964844, 0.25)
+texture = ExtResource("7_0h0yj")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Corridor/Electrical Cord"]
+z_index = 4
+position = Vector2(287, 13)
+rotation = 1.5708
+scale = Vector2(-0.425135, -0.25)
+texture = ExtResource("7_0h0yj")
