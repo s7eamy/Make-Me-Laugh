@@ -58,8 +58,10 @@ func handle_attack():
 		return
 		
 	play_animation("attack", animation_direction)
+	$AttackAudioPlayer2D.play()
 	
 	if attackable_target && attackable_target.get_parent() && attackable_target.get_parent().has_method("_on_attacked"):
+		$DeathAudioPlayer2D.play()
 		if attackable_target.get_parent().has_method("check_being_in_vision"):
 			attackable_target.get_parent().check_being_in_vision()
 		check_being_in_vision(attackable_target)
@@ -85,4 +87,5 @@ func handle_activate():
 		return
 	
 	if activatable_target && activatable_target.get_parent() && activatable_target.get_parent().has_method("_on_activated"):
+		$HazardAudioPlayer2D.play()
 		activatable_target.get_parent()._on_activated()

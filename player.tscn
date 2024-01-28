@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccxfekdwud7n6"]
+[gd_scene load_steps=12 format=3 uid="uid://ccxfekdwud7n6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_u1ev2"]
 [ext_resource type="Script" path="res://player_movement.gd" id="2_oy5m2"]
 [ext_resource type="PackedScene" uid="uid://blc5ndqbdce12" path="res://hud.tscn" id="3_a7sgt"]
 [ext_resource type="PackedScene" uid="uid://c0wsbw3ly2ku6" path="res://player_animation.tscn" id="4_p4rk2"]
+[ext_resource type="AudioStream" uid="uid://04gkfw8i12lf" path="res://sounds/Attack.wav" id="5_tpli2"]
+[ext_resource type="AudioStream" uid="uid://b6n4kbjd7nnsb" path="res://sounds/Death.wav" id="6_sbcax"]
+[ext_resource type="AudioStream" uid="uid://dv5pm6172xfq3" path="res://sounds/Hazard.wav" id="7_63c65"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwvhx"]
 size = Vector2(17, 19)
@@ -71,3 +74,12 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody/VisionDetector"]
 shape = SubResource("CircleShape2D_3fufu")
 debug_color = Color(0.67451, 0.505882, 0, 0.419608)
+
+[node name="AttackAudioPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_tpli2")
+
+[node name="DeathAudioPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_sbcax")
+
+[node name="HazardAudioPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_63c65")
