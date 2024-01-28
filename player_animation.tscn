@@ -244,9 +244,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nmucw")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackDown",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -261,9 +261,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_njqvi")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackLeft",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -278,9 +278,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v50lc")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackRight",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -295,9 +295,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ujyvq")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackUp",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -699,9 +699,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vxryy")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackDown",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -716,9 +716,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qvfy5")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackLeft",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -733,9 +733,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_olbyd")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackRight",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -750,9 +750,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ilwn")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackUp",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -994,9 +994,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bokct")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackDown",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1011,9 +1011,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xi314")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackLeft",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1028,9 +1028,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d7hos")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackRight",
-"speed": 16.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1045,9 +1045,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0l4rs")
 }],
-"loop": false,
+"loop": true,
 "name": &"AttackUp",
-"speed": 16.0
+"speed": 8.0
 }]
 
 [node name="PlayerAnimation" type="Node2D"]

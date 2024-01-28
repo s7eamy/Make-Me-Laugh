@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://blc5ndqbdce12"]
+[gd_scene load_steps=5 format=3 uid="uid://bl6gfj25y787o"]
 
-[ext_resource type="Theme" uid="uid://bmbdb18f7jxv3" path="res://hud.tres" id="2_a4li0"]
-[ext_resource type="PackedScene" uid="uid://bm1o1qte6dcg8" path="res://menu_start_screen.tscn" id="3_k74jy"]
+[ext_resource type="Theme" path="res://hud.tres" id="2_a4li0"]
+[ext_resource type="PackedScene" path="res://menu_start_screen.tscn" id="3_k74jy"]
 [ext_resource type="Script" path="res://Stopwatch.gd" id="3_oqgsn"]
 [ext_resource type="Script" path="res://score.gd" id="4_gbmwl"]
 

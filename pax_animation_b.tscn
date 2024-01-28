@@ -1621,7 +1621,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="PaxAnimationB" type="Node"]
+[node name="PaxAnimationB" type="Node2D"]
 
 [node name="Body" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_du18y")
