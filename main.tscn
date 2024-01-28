@@ -1,13 +1,3 @@
-[gd_scene load_steps=3 format=3 uid="uid://kywokndgrr2u"]
-
-[ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="2_tnw5m"]
-[ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="3_1jn14"]
+[gd_scene format=3 uid="uid://kywokndgrr2u"]
 
 [node name="Main" type="Node"]
-
-[node name="Player" parent="." instance=ExtResource("2_tnw5m")]
-
-[node name="Pax" parent="." instance=ExtResource("3_1jn14")]
-
-[node name="Pax2" parent="." instance=ExtResource("3_1jn14")]
-position = Vector2(240, -5)

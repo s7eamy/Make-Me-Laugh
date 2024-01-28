@@ -29,7 +29,6 @@ script = ExtResource("2_oy5m2")
 [node name="Camera2D" type="Camera2D" parent="PlayerBody"]
 
 [node name="HUD" parent="PlayerBody/Camera2D" instance=ExtResource("3_a7sgt")]
-visible = false
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="PlayerBody"]
 unique_name_in_owner = true

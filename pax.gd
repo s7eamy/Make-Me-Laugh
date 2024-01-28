@@ -58,7 +58,6 @@ func check_being_in_vision():
 	
 	for vision in vision_cones:
 		if vision.is_in_group("PaxVision"):
-			var failure_message = 'Pax in vision of: ' + vision.get_parent().name
-			print(failure_message)
+			var failure_message = 'Pax was in vision of: ' + vision.get_parent().name
 			Global._on_game_over_failure(failure_message)
 			break

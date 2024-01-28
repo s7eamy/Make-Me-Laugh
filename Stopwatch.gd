@@ -6,3 +6,5 @@ func _process(delta):
 	time += delta
 	text = "%.02f" % time
 
+func get_time():
+	return time
