@@ -10,70 +10,70 @@
 [ext_resource type="Texture2D" uid="uid://by5dkwwh1jv30" path="res://art/emoticons.png" id="8_5vj43"]
 
 [node name="Trailer" type="Node2D"]
-position = Vector2(4.5, 15.5)
+position = Vector2(6.5, 18.5)
 
 [node name="Floor" type="Node" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
-position = Vector2(35.5, 100.5)
+position = Vector2(37.5, 103.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(17, 82, 62, 45)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Floor"]
-position = Vector2(35.5, 55.5)
+position = Vector2(37.5, 58.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(17, 82, 62, 45)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Floor"]
-position = Vector2(97.5, 100.5)
+position = Vector2(99.5, 103.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(17, 82, 62, 45)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Floor"]
-position = Vector2(97.5, 55.5)
+position = Vector2(99.5, 58.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(17, 82, 62, 45)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Floor"]
 z_index = 1
-position = Vector2(97.5, 44.5)
+position = Vector2(99.5, 47.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(209, 17, 62, 23)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Floor"]
-position = Vector2(159.5, 100.5)
+position = Vector2(161.5, 103.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(17, 82, 62, 45)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Floor"]
-position = Vector2(159.5, 55.5)
+position = Vector2(161.5, 58.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(17, 82, 62, 45)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(97.5, 4.5)
+position = Vector2(99.5, 7.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(17, 12, 184, 3)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(4.5, 5.5)
+position = Vector2(6.5, 8.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(12, 12, 5, 5)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(3.5, 65.5)
+position = Vector2(5.5, 68.5)
 rotation = 1.5708
 scale = Vector2(-1, -1)
 texture = ExtResource("1_iw34t")
@@ -82,14 +82,14 @@ region_rect = Rect2(17, 12, 115, 3)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(190.5, 5.5)
+position = Vector2(192.5, 8.5)
 texture = ExtResource("1_iw34t")
 region_enabled = true
 region_rect = Rect2(271, 12, 5, 5)
 
 [node name="Sprite2D16" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(191.5, 64.5)
+position = Vector2(193.5, 67.5)
 rotation = 1.5708
 texture = ExtResource("1_iw34t")
 region_enabled = true
@@ -97,7 +97,7 @@ region_rect = Rect2(17, 12, 115, 3)
 
 [node name="Sprite2D17" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(190.5, 123.5)
+position = Vector2(192.5, 126.5)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_iw34t")
 region_enabled = true
@@ -105,7 +105,7 @@ region_rect = Rect2(12, 12, 5, 5)
 
 [node name="Sprite2D18" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(4.5, 123.5)
+position = Vector2(6.5, 126.5)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_iw34t")
 region_enabled = true
@@ -113,7 +113,7 @@ region_rect = Rect2(271, 12, 5, 5)
 
 [node name="Sprite2D19" type="Sprite2D" parent="Floor"]
 z_index = 3
-position = Vector2(97.5, 124.5)
+position = Vector2(99.5, 127.5)
 scale = Vector2(-1, -1)
 texture = ExtResource("1_iw34t")
 region_enabled = true
@@ -123,105 +123,105 @@ region_rect = Rect2(17, 12, 184, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="Walls"]
 z_index = 5
-position = Vector2(97, 19.5)
+position = Vector2(99, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(2, 1, 28, 30)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Walls"]
 z_index = 4
-position = Vector2(119, 19.5)
+position = Vector2(121, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(4, 33, 19, 30)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Walls"]
 z_index = 4
-position = Vector2(75, 19.5)
+position = Vector2(77, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(4, 33, 19, 30)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(58.5, 19.5)
+position = Vector2(60.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(42.5, 19.5)
+position = Vector2(44.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(26.5, 19.5)
+position = Vector2(28.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(11.5, 19.5)
+position = Vector2(13.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(338, 768, 14, 32)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(136.5, 19.5)
+position = Vector2(138.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D9" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(152.5, 19.5)
+position = Vector2(154.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D10" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(168.5, 19.5)
+position = Vector2(170.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(183.5, 19.5)
+position = Vector2(185.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 14, 32)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(90, 61.5)
+position = Vector2(92, 64.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(208, 851, 47, 12)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Walls"]
 z_index = 2
-position = Vector2(42.5, 19.5)
+position = Vector2(44.5, 22.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Walls"]
 z_index = 3
-position = Vector2(121, 61.5)
+position = Vector2(123, 64.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(212, 851, 15, 12)
 
 [node name="Sprite2D15" type="Sprite2D" parent="Walls"]
 z_index = 3
-position = Vector2(68, 50.5)
+position = Vector2(70, 53.5)
 rotation = 1.5708
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -229,7 +229,7 @@ region_rect = Rect2(209, 852, 34, 3)
 
 [node name="Sprite2D16" type="Sprite2D" parent="Walls"]
 z_index = 3
-position = Vector2(127.5, 50)
+position = Vector2(129.5, 53)
 rotation = 1.5708
 scale = Vector2(-1, -1)
 texture = ExtResource("2_o0pfm")
@@ -240,7 +240,7 @@ region_rect = Rect2(209, 852, 35, 3)
 
 [node name="Lamp1" type="Sprite2D" parent="Static Items"]
 z_index = 5
-position = Vector2(10.5, 31.5)
+position = Vector2(12.5, 34.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -248,7 +248,7 @@ region_rect = Rect2(1392, 1588, 15, 29)
 
 [node name="Lamp2" type="Sprite2D" parent="Static Items"]
 z_index = 5
-position = Vector2(184.5, 32.5)
+position = Vector2(186.5, 35.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -256,42 +256,42 @@ region_rect = Rect2(1392, 1588, 15, 29)
 
 [node name="Table1" type="Sprite2D" parent="Static Items"]
 z_index = 5
-position = Vector2(158.5, 55.5)
+position = Vector2(160.5, 58.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(1396, 1907, 23, 14)
 
 [node name="Table2" type="Sprite2D" parent="Static Items"]
 z_index = 5
-position = Vector2(33.5, 55.5)
+position = Vector2(35.5, 58.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(1396, 1907, 23, 14)
 
 [node name="Table3" type="Sprite2D" parent="Static Items"]
 z_index = 5
-position = Vector2(45, 93.25)
+position = Vector2(47, 96.25)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(1396, 1907, 23, 14)
 
 [node name="Table4" type="Sprite2D" parent="Static Items"]
 z_index = 5
-position = Vector2(96.5, 106.5)
+position = Vector2(98.5, 109.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(1396, 1907, 23, 14)
 
 [node name="Table5" type="Sprite2D" parent="Static Items"]
 z_index = 5
-position = Vector2(146, 90.25)
+position = Vector2(148, 93.25)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
 region_rect = Rect2(1396, 1907, 23, 14)
 
 [node name="Chair1" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(146, 99.25)
+position = Vector2(148, 102.25)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -299,7 +299,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair2" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(159, 97.25)
+position = Vector2(161, 100.25)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -307,7 +307,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair3" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(158.5, 65.5)
+position = Vector2(160.5, 68.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -315,7 +315,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair4" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(134, 98.25)
+position = Vector2(136, 101.25)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -323,7 +323,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair5" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(131, 90.25)
+position = Vector2(133, 93.25)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -331,7 +331,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair6" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(163, 90.25)
+position = Vector2(165, 93.25)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -339,7 +339,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair7" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(174.5, 56.5)
+position = Vector2(176.5, 59.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -347,7 +347,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair8" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(170.5, 64.5)
+position = Vector2(172.5, 67.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -355,7 +355,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Food1" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(152.5, 53.5)
+position = Vector2(154.5, 56.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -363,7 +363,7 @@ region_rect = Rect2(1025, 1255, 14, 10)
 
 [node name="Food2" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(164.5, 53.5)
+position = Vector2(166.5, 56.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -371,7 +371,7 @@ region_rect = Rect2(1041, 1255, 14, 10)
 
 [node name="Candle1" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(158.5, 52.5)
+position = Vector2(160.5, 55.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -379,7 +379,7 @@ region_rect = Rect2(1555, 1506, 9, 15)
 
 [node name="Candle2" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(146, 86.25)
+position = Vector2(148, 89.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -387,7 +387,7 @@ region_rect = Rect2(1555, 1506, 9, 15)
 
 [node name="Candle3" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(96.5, 100.5)
+position = Vector2(98.5, 103.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -395,7 +395,7 @@ region_rect = Rect2(1555, 1506, 9, 15)
 
 [node name="Candle4" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(33.5, 49.5)
+position = Vector2(35.5, 52.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -403,7 +403,7 @@ region_rect = Rect2(1555, 1506, 9, 15)
 
 [node name="Candle5" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(39, 87.25)
+position = Vector2(41, 90.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -411,7 +411,7 @@ region_rect = Rect2(1555, 1506, 9, 15)
 
 [node name="Food3" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(41, 93.25)
+position = Vector2(43, 96.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -419,7 +419,7 @@ region_rect = Rect2(1025, 1255, 14, 10)
 
 [node name="Food4" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(47, 89.25)
+position = Vector2(49, 92.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -427,7 +427,7 @@ region_rect = Rect2(1089, 1253, 14, 12)
 
 [node name="Food5" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(51, 93.25)
+position = Vector2(53, 96.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -435,7 +435,7 @@ region_rect = Rect2(1105, 1254, 14, 11)
 
 [node name="Food6" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(90.5, 102.5)
+position = Vector2(92.5, 105.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -443,7 +443,7 @@ region_rect = Rect2(1073, 1255, 14, 10)
 
 [node name="Food7" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(95.5, 105.5)
+position = Vector2(97.5, 108.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -451,7 +451,7 @@ region_rect = Rect2(1089, 1253, 14, 12)
 
 [node name="Food8" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(102.5, 104.5)
+position = Vector2(104.5, 107.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -459,7 +459,7 @@ region_rect = Rect2(1041, 1255, 14, 10)
 
 [node name="Food9" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(140, 88.25)
+position = Vector2(142, 91.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -467,7 +467,7 @@ region_rect = Rect2(1025, 1255, 14, 10)
 
 [node name="Food10" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(152, 88.25)
+position = Vector2(154, 91.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -475,7 +475,7 @@ region_rect = Rect2(1073, 1255, 14, 10)
 
 [node name="Food11" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(39.5, 52.5)
+position = Vector2(41.5, 55.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -483,7 +483,7 @@ region_rect = Rect2(1105, 1254, 14, 11)
 
 [node name="Food12" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(27.5, 51.5)
+position = Vector2(29.5, 54.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -491,7 +491,7 @@ region_rect = Rect2(1089, 1253, 14, 12)
 
 [node name="Food13" type="Sprite2D" parent="Static Items"]
 z_index = 7
-position = Vector2(33.5, 55.5)
+position = Vector2(35.5, 58.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -499,7 +499,7 @@ region_rect = Rect2(1041, 1255, 14, 10)
 
 [node name="Chair9" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(29.5, 94.5)
+position = Vector2(31.5, 97.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -507,7 +507,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair10" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(34.5, 102.5)
+position = Vector2(36.5, 105.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -515,7 +515,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair11" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(45.5, 103.5)
+position = Vector2(47.5, 106.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -523,7 +523,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair12" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(56.5, 102.5)
+position = Vector2(58.5, 105.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -531,7 +531,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair13" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(20.5, 55.5)
+position = Vector2(22.5, 58.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -539,7 +539,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair14" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(32.5, 61.5)
+position = Vector2(34.5, 64.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -547,7 +547,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair15" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(96.5, 114.5)
+position = Vector2(98.5, 117.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -555,7 +555,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair16" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(111.5, 109.5)
+position = Vector2(113.5, 112.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -563,7 +563,7 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="Chair17" type="Sprite2D" parent="Static Items"]
 z_index = 4
-position = Vector2(82.5, 110.5)
+position = Vector2(84.5, 113.5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_o0pfm")
 region_enabled = true
@@ -573,124 +573,124 @@ region_rect = Rect2(1024, 1393, 15, 15)
 
 [node name="PaxAnimationA" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(74.5, 73.5)
+position = Vector2(76.5, 76.5)
 scale = Vector2(0.8, 0.8)
 direction = "up"
 
 [node name="PaxAnimationB" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 7
-position = Vector2(98.5, 75.5)
+position = Vector2(100.5, 78.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "up"
 
 [node name="PaxAnimationB2" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 7
-position = Vector2(112.5, 71.5)
+position = Vector2(114.5, 74.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "up"
 
 [node name="PaxAnimationA2" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(93.5, 81.5)
+position = Vector2(95.5, 84.5)
 scale = Vector2(0.8, 0.8)
 direction = "up"
 
 [node name="PaxAnimationA3" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(115.5, 82.5)
+position = Vector2(117.5, 85.5)
 scale = Vector2(0.8, 0.8)
 direction = "up"
 
 [node name="PaxAnimationB3" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 7
-position = Vector2(82.5, 86.5)
+position = Vector2(84.5, 89.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "up"
 
 [node name="PaxAnimationB4" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 7
-position = Vector2(64.5, 76.5)
+position = Vector2(66.5, 79.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "up"
 
 [node name="PaxAnimationB5" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 7
-position = Vector2(16.5, 60.5)
+position = Vector2(18.5, 63.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "right"
 
 [node name="PaxAnimationA4" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(49.5, 51.5)
+position = Vector2(51.5, 54.5)
 scale = Vector2(0.8, 0.8)
 direction = "right"
 
 [node name="PaxAnimationB6" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 8
-position = Vector2(77.5, 107.5)
+position = Vector2(79.5, 110.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "up"
 
 [node name="PaxAnimationA5" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(183.5, 55.5)
+position = Vector2(185.5, 58.5)
 scale = Vector2(0.8, 0.8)
 direction = "left"
 
 [node name="PaxAnimationB7" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 4
-position = Vector2(158.5, 41.5)
+position = Vector2(160.5, 44.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "left"
 
 [node name="PaxAnimationB8" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 4
-position = Vector2(143.5, 75.5)
+position = Vector2(145.5, 78.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "up"
 
 [node name="PaxAnimationA6" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(152.5, 95.5)
+position = Vector2(154.5, 98.5)
 scale = Vector2(0.8, 0.8)
 direction = "up"
 
 [node name="PaxAnimationA7" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(37.5, 99.5)
+position = Vector2(39.5, 102.5)
 scale = Vector2(0.8, 0.8)
 direction = "up"
 
 [node name="PaxAnimationA8" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(115.5, 105.5)
+position = Vector2(117.5, 108.5)
 scale = Vector2(0.8, 0.8)
 direction = "up"
 
 [node name="PaxAnimationB9" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 4
-position = Vector2(29.5, 41.5)
+position = Vector2(31.5, 44.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "right"
 
 [node name="PaxAnimationA9" parent="Pax" instance=ExtResource("3_s2gul")]
 z_index = 8
-position = Vector2(26.5, 71.5)
+position = Vector2(28.5, 74.5)
 scale = Vector2(0.8, 0.8)
 direction = "right"
 
 [node name="PaxAnimationB10" parent="Pax" instance=ExtResource("4_y2efj")]
 z_index = 7
-position = Vector2(163.5, 66.5)
+position = Vector2(165.5, 69.5)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("5_2lbt3")
 direction = "left"
@@ -773,9 +773,8 @@ direction = "down"
 [node name="Step 2" type="Node" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Step 2"]
-visible = false
 z_index = 15
-position = Vector2(101, 20)
+position = Vector2(108, 35)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 33, 14, 13)
@@ -783,105 +782,92 @@ region_rect = Rect2(17, 33, 14, 13)
 [node name="Step 3" type="Node" parent="."]
 
 [node name="Sprite2D2" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 7
-position = Vector2(116, 64)
+position = Vector2(123, 79)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 7
-position = Vector2(152, 72)
+position = Vector2(159, 87)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 5
-position = Vector2(155, 45)
+position = Vector2(162, 60)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 6
-position = Vector2(27, 51)
+position = Vector2(34, 66)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 15
-position = Vector2(50, 32)
+position = Vector2(57, 47)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D7" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 15
-position = Vector2(31, 21)
+position = Vector2(38, 36)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 7
-position = Vector2(38, 77)
+position = Vector2(45, 92)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D9" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 7
-position = Vector2(74, 54)
+position = Vector2(81, 69)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D10" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 6
-position = Vector2(97, 55)
+position = Vector2(104, 70)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D11" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 6
-position = Vector2(117, 85)
+position = Vector2(124, 100)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D12" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 15
-position = Vector2(150, 20)
+position = Vector2(157, 35)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D13" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 7
-position = Vector2(79, 86)
+position = Vector2(86, 101)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
 
 [node name="Sprite2D14" type="Sprite2D" parent="Step 3"]
-visible = false
 z_index = 15
-position = Vector2(175, 35)
+position = Vector2(182, 50)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(1, 1, 14, 13)
@@ -889,9 +875,8 @@ region_rect = Rect2(1, 1, 14, 13)
 [node name="Step 4" type="Node" parent="."]
 
 [node name="Sprite2D15" type="Sprite2D" parent="Step 4"]
-visible = false
 z_index = 6
-position = Vector2(63, 54)
+position = Vector2(70, 69)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
@@ -899,33 +884,29 @@ region_rect = Rect2(17, 1, 14, 13)
 [node name="Step 5" type="Node" parent="."]
 
 [node name="Sprite2D16" type="Sprite2D" parent="Step 5"]
-visible = false
 z_index = 6
-position = Vector2(63, 54)
+position = Vector2(70, 69)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D17" type="Sprite2D" parent="Step 5"]
-visible = false
 z_index = 6
-position = Vector2(113, 51)
+position = Vector2(120, 66)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D18" type="Sprite2D" parent="Step 5"]
-visible = false
 z_index = 6
-position = Vector2(38, 78)
+position = Vector2(45, 93)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D19" type="Sprite2D" parent="Step 5"]
-visible = false
 z_index = 6
-position = Vector2(38, 78)
+position = Vector2(45, 93)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
@@ -933,89 +914,78 @@ region_rect = Rect2(17, 1, 14, 13)
 [node name="Step 6" type="Node" parent="."]
 
 [node name="Sprite2D2" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 15
-position = Vector2(101, 20)
+position = Vector2(108, 35)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(49, 33, 14, 13)
 
 [node name="Sprite2D20" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(38, 78)
+position = Vector2(45, 93)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D21" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(63, 54)
+position = Vector2(70, 69)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D22" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(113, 51)
+position = Vector2(120, 66)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D23" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(38, 78)
+position = Vector2(45, 93)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D24" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(16, 39)
+position = Vector2(23, 54)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D25" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(150, 21)
+position = Vector2(157, 36)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D26" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(97, 55)
+position = Vector2(104, 70)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D27" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(74, 54)
+position = Vector2(81, 69)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D28" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(80, 65)
+position = Vector2(87, 80)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
 
 [node name="Sprite2D29" type="Sprite2D" parent="Step 6"]
-visible = false
 z_index = 6
-position = Vector2(143, 51)
+position = Vector2(150, 66)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
@@ -1023,9 +993,8 @@ region_rect = Rect2(17, 1, 14, 13)
 [node name="Step 7" type="Node" parent="."]
 
 [node name="Sprite2D3" type="Sprite2D" parent="Step 7"]
-visible = false
 z_index = 15
-position = Vector2(101, 20)
+position = Vector2(108, 35)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(49, 33, 14, 13)
@@ -1033,9 +1002,8 @@ region_rect = Rect2(49, 33, 14, 13)
 [node name="Step 8" type="Node" parent="."]
 
 [node name="Sprite2D4" type="Sprite2D" parent="Step 8"]
-visible = false
 z_index = 15
-position = Vector2(100, 12)
+position = Vector2(107, 27)
 texture = ExtResource("8_5vj43")
 region_enabled = true
 region_rect = Rect2(17, 1, 14, 13)
