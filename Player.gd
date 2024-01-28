@@ -2,16 +2,29 @@ extends Node2D
 
 signal game_over_failure(failure_message)
 
+@onready var animator_node = $PlayerBody/PlayerAnimation
+
 var is_attacking = false
 var is_activating = false
 var attackable_target
 var activatable_target
+var animation_direction
 
 func _physics_process(_delta):
+	animation_direction = $PlayerBody.get_direction() if $PlayerBody.get_direction() != "" else animation_direction
 	get_input()
 	resolve_targets()
 	handle_attack()
 	handle_activate()
+
+func play_animation(action: String, direction: String):
+	var animation = action.capitalize() + direction.capitalize()
+	for anim in animator_node.get_children():
+		if action == "attack" && anim.name == "Sword":
+			anim.visible = true
+			anim.play()
+		if anim.animation != animation:
+			anim.play(animation)
 
 func get_input():
 	is_attacking = Input.is_action_just_pressed("attack")
@@ -42,6 +55,8 @@ func resolve_closest_target_in_area(area):
 func handle_attack():
 	if not is_attacking:
 		return
+		
+	play_animation("attack", animation_direction)
 	
 	if attackable_target && attackable_target.get_parent() && attackable_target.get_parent().has_method("_on_attacked"):
 		if attackable_target.get_parent().has_method("check_being_in_vision"):

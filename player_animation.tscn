@@ -1,5 +1,6 @@
-[gd_scene load_steps=135 format=3 uid="uid://c0wsbw3ly2ku6"]
+[gd_scene load_steps=136 format=3 uid="uid://c0wsbw3ly2ku6"]
 
+[ext_resource type="Script" path="res://player_animation.gd" id="1_aaaaq"]
 [ext_resource type="Texture2D" uid="uid://jw7whtgux7xw" path="res://art/character/clown.png" id="1_l80kn"]
 [ext_resource type="Texture2D" uid="uid://chutjf2vhw2jg" path="res://art/character/mask_clown_red.png" id="2_4a3wf"]
 [ext_resource type="Texture2D" uid="uid://cuu8ba1ltdgnk" path="res://art/character/sword.png" id="3_00cpe"]
@@ -243,9 +244,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nmucw")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackDown",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -260,9 +261,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_njqvi")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackLeft",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -277,9 +278,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v50lc")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackRight",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -294,9 +295,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ujyvq")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackUp",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -698,9 +699,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vxryy")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackDown",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -715,9 +716,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qvfy5")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackLeft",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -732,9 +733,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_olbyd")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackRight",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -749,9 +750,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ilwn")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackUp",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -993,9 +994,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bokct")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackDown",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1010,9 +1011,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xi314")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackLeft",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1027,9 +1028,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d7hos")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackRight",
-"speed": 8.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1044,21 +1045,27 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0l4rs")
 }],
-"loop": true,
+"loop": false,
 "name": &"AttackUp",
-"speed": 8.0
+"speed": 16.0
 }]
 
-[node name="PlayerAnimation" type="Node"]
+[node name="PlayerAnimation" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_aaaaq")
 
 [node name="Body" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qv140")
-animation = &"IdleDown"
+animation = &"AttackDown"
+autoplay = "IdleDown"
 
 [node name="Head" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_j1yh0")
-animation = &"AttackDown"
+animation = &"AttackUp"
+autoplay = "IdleDown"
 
 [node name="Sword" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7i11o")
 animation = &"AttackUp"
+
+[connection signal="animation_finished" from="Body" to="." method="_on_body_animation_finished"]
