@@ -1,15 +1,16 @@
-[gd_scene load_steps=37 format=3 uid="uid://kywokndgrr2u"]
+[gd_scene load_steps=43 format=3 uid="uid://kywokndgrr2u"]
 
 [ext_resource type="Texture2D" uid="uid://dlg4hrgi0lc5x" path="res://art/environment/TopDownHouse_FloorsAndWalls.png" id="1_11a2i"]
 [ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="1_gx1qx"]
 [ext_resource type="Texture2D" uid="uid://djw3w8n7qfwli" path="res://art/environment/global.png" id="2_dnv7d"]
 [ext_resource type="PackedScene" uid="uid://donb8d06i1yde" path="res://hazard.tscn" id="4_mfodh"]
 [ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="4_r504u"]
-[ext_resource type="Texture2D" uid="uid://b651v5w3wemox" path="res://art/Lightning.png" id="5_5qh6j"]
-[ext_resource type="PackedScene" uid="uid://bci5htffm75nu" path="res://attack_radius.tscn" id="5_w2s4o"]
-[ext_resource type="Texture2D" uid="uid://b24q3tygrf6x8" path="res://art/environment/Cord.png" id="6_rp10o"]
+[ext_resource type="Texture2D" path="res://art/Lightning.png" id="5_5qh6j"]
+[ext_resource type="PackedScene" path="res://attack_radius.tscn" id="5_w2s4o"]
+[ext_resource type="Texture2D" path="res://art/environment/Lightning Strike.png" id="6_3pfgu"]
+[ext_resource type="Texture2D" path="res://art/environment/Cord.png" id="6_rp10o"]
 [ext_resource type="Script" path="res://PathFollow2D.gd" id="9_0xjun"]
-[ext_resource type="Texture2D" uid="uid://rc3hgsh8gc88" path="res://art/2d_lights_and_shadows_neutral_point_light.webp" id="9_ovgy1"]
+[ext_resource type="Texture2D" path="res://art/2d_lights_and_shadows_neutral_point_light.webp" id="9_ovgy1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp6jw"]
 atlas = ExtResource("2_dnv7d")
@@ -101,6 +102,42 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc2m5"]
+atlas = ExtResource("6_3pfgu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0ils"]
+atlas = ExtResource("6_3pfgu")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edhlk"]
+atlas = ExtResource("6_3pfgu")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de1lm"]
+atlas = ExtResource("6_3pfgu")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uq3go"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc2m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0ils")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edhlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de1lm")
+}],
+"loop": false,
+"name": &"strike",
+"speed": 8.0
 }]
 
 [sub_resource type="Curve2D" id="Curve2D_k4bgm"]
@@ -884,6 +921,34 @@ position = Vector2(391, 7)
 [node name="AttackRadius" parent="Corridor/Electricity Box/Hazard" instance=ExtResource("5_w2s4o")]
 position = Vector2(-113, -62)
 
+[node name="LightningAnimation" type="Node2D" parent="Corridor/Electricity Box/Hazard"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Corridor/Electricity Box/Hazard/LightningAnimation"]
+visible = false
+position = Vector2(-127, -63)
+scale = Vector2(0.570216, 0.639729)
+sprite_frames = SubResource("SpriteFrames_uq3go")
+animation = &"strike"
+frame_progress = 0.735038
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Corridor/Electricity Box/Hazard/LightningAnimation"]
+visible = false
+position = Vector2(-104, -52)
+rotation = 1.21121
+scale = Vector2(0.420374, -0.777289)
+sprite_frames = SubResource("SpriteFrames_uq3go")
+animation = &"strike"
+frame_progress = 0.202989
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Corridor/Electricity Box/Hazard/LightningAnimation"]
+visible = false
+position = Vector2(-121, -53)
+rotation = 1.11327
+scale = Vector2(0.683814, -0.579548)
+sprite_frames = SubResource("SpriteFrames_uq3go")
+animation = &"strike"
+frame_progress = 0.601242
+
 [node name="Electrical Cord" type="Node" parent="Corridor"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Corridor/Electrical Cord"]
@@ -1014,7 +1079,6 @@ scale = Vector2(0.999997, 0.999997)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision12"]
 position = Vector2(3.78223, -3.09445)
 rotation = 0.224007
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ywcwc")
 
 [node name="Wall Collision12" type="StaticBody2D" parent="Colliders/Wall Collision12"]
@@ -1025,7 +1089,6 @@ scale = Vector2(0.999997, 0.999997)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision12/Wall Collision12"]
 position = Vector2(3.78223, -3.09445)
 rotation = 0.224007
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ywcwc")
 
 [node name="Wall Collision11" type="StaticBody2D" parent="Colliders"]
@@ -1036,7 +1099,6 @@ scale = Vector2(0.999998, 0.999998)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision11"]
 position = Vector2(3.78223, -3.09445)
 rotation = 0.224007
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ywcwc")
 
 [node name="Wall Collision7" type="StaticBody2D" parent="Colliders"]
@@ -1047,18 +1109,15 @@ scale = Vector2(0.999999, 0.999999)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision7"]
 position = Vector2(3.78223, -3.09445)
 rotation = 0.224007
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ywcwc")
 
 [node name="Wall Collision6" type="StaticBody2D" parent="Colliders"]
 position = Vector2(401, -72)
 rotation = -0.215612
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision6"]
 position = Vector2(-99.1084, -19.4946)
 rotation = 0.224008
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wuv2h")
 
 [node name="Sidewall Collision" type="StaticBody2D" parent="Colliders"]
@@ -1071,18 +1130,15 @@ shape = SubResource("RectangleShape2D_qvcnm")
 [node name="Wall Collision5" type="StaticBody2D" parent="Colliders"]
 position = Vector2(187, 48)
 rotation = -0.107806
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision5"]
 position = Vector2(-0.347443, 7.55846)
 rotation = 0.0738799
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tipig")
 
 [node name="Wall Collision4" type="StaticBody2D" parent="Colliders"]
 position = Vector2(187, 19)
 rotation = -0.0539029
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision4"]
 position = Vector2(4.2283, -54.8544)
@@ -1159,3 +1215,5 @@ position = Vector2(393, 4)
 energy = 0.4
 texture = ExtResource("9_ovgy1")
 texture_scale = 0.2
+
+[connection signal="animation_finished" from="Corridor/Electricity Box/Hazard/LightningAnimation/AnimatedSprite2D" to="Corridor/Electricity Box/Hazard" method="_on_animated_sprite_2d_animation_finished"]
