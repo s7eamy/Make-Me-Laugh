@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccxfekdwud7n6"]
+[gd_scene load_steps=9 format=3 uid="uid://ccxfekdwud7n6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_u1ev2"]
 [ext_resource type="Script" path="res://player_movement.gd" id="2_oy5m2"]
 [ext_resource type="PackedScene" uid="uid://blc5ndqbdce12" path="res://hud.tscn" id="3_a7sgt"]
+[ext_resource type="PackedScene" uid="uid://c0wsbw3ly2ku6" path="res://player_animation.tscn" id="4_p4rk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwvhx"]
-size = Vector2(50, 49)
+size = Vector2(48, 60)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_twqgg"]
 radius = 74.0608
@@ -26,19 +27,17 @@ collision_mask = 771
 input_pickable = true
 script = ExtResource("2_oy5m2")
 
+[node name="PlayerAnimation" parent="PlayerBody" instance=ExtResource("4_p4rk2")]
+position = Vector2(2, -13)
+
 [node name="Camera2D" type="Camera2D" parent="PlayerBody"]
 
 [node name="HUD" parent="PlayerBody/Camera2D" instance=ExtResource("3_a7sgt")]
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="PlayerBody"]
 unique_name_in_owner = true
-position = Vector2(0, 0.5)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_wwvhx")
-
-[node name="PlayerPolygon" type="Polygon2D" parent="PlayerBody"]
-position = Vector2(-25, -24)
-color = Color(0.596078, 0.894118, 0.745098, 1)
-polygon = PackedVector2Array(0, 0, 50, 0, 50, 49, 0, 49)
 
 [node name="AttackArea" type="Area2D" parent="PlayerBody"]
 unique_name_in_owner = true
