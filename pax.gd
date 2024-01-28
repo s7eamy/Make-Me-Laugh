@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var animator_node = $PaxAnimationA
+@export var viewcone_rotation = 0
+@export var idle_direction = "down"
 
 # if pax is moving, these variables are needed to set viewcone and animation correctly
 var path
@@ -11,6 +13,9 @@ func _ready():
 	if get_parent().name == "PathFollow2D":
 		path = get_parent()
 		last_position = path.position
+	else:
+		$ViewCone.rotation = deg_to_rad(viewcone_rotation)
+		play_animation("idle", idle_direction)
 
 func _on_attacked() -> void:
 	print("Participant " + name + " was attacked!")
@@ -24,7 +29,7 @@ func play_animation(action: String, _direction: String):
 		
 
 func _process(_delta):
-	if get_parent().name == "PathFollow2D":
+	if path:
 		# change animation direction based on movement direction
 		direction = Vector2(0, 0)
 		
@@ -34,8 +39,7 @@ func _process(_delta):
 		elif path.position.x < last_position.x:
 			direction.x = -1
 			play_animation("walk", "left")
-			
-		if path.position.y > last_position.y:
+		elif path.position.y > last_position.y:
 			direction.y = 1
 			play_animation("walk", "down")
 		elif path.position.y < last_position.y:
@@ -58,6 +62,6 @@ func check_being_in_vision():
 	
 	for vision in vision_cones:
 		if vision.is_in_group("PaxVision"):
-			print('Pax in vision of: ' + vision.get_parent().name)
-			# TODO: invoke gameover
+			var failure_message = 'Pax was in vision of: ' + vision.get_parent().name
+			Global._on_game_over_failure(failure_message)
 			break

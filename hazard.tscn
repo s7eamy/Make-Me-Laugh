@@ -1,13 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://donb8d06i1yde"]
+[gd_scene load_steps=3 format=3 uid="uid://donb8d06i1yde"]
 
 [ext_resource type="Script" path="res://hazard.gd" id="1_wc0be"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hd0pj"]
-radius = 4.5
-height = 11.6667
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_d3vd1"]
-radius = 100.0
+radius = 1.5
+height = 4.0
 
 [node name="Hazard" type="Node2D"]
 script = ExtResource("1_wc0be")
@@ -20,16 +17,3 @@ collision_mask = 272
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CapsuleShape2D_hd0pj")
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-scale = Vector2(6, 6)
-offset = Vector2(0, 2)
-polygon = PackedVector2Array(0, 2, -4, 1, -4, -4, -2, -8, 0, -5, 1, -7, 2, -6, 3, -9, 4, -5, 5, -3, 4, -1, 2, 1)
-
-[node name="AttackRadius" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 256
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRadius"]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_d3vd1")

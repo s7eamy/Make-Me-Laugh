@@ -1,6 +1,7 @@
 extends Node2D
 
-signal game_over_failure(failure_message)
+#func _ready():
+	#set_process(false)
 
 @onready var animator_node = $PlayerBody/PlayerAnimation
 
@@ -75,8 +76,8 @@ func check_being_in_vision(target):
 	
 	for vision in vision_cones:
 		if vision.is_in_group("PaxVision"):
-			var failure_message = "Player in vision of: " + vision.get_parent().name
-			emit_signal("game_over_failure", failure_message)
+			var failure_message = "Player was in vision of: " + vision.get_parent().name
+			Global._on_game_over_failure(failure_message)
 			break
 
 func handle_activate():
