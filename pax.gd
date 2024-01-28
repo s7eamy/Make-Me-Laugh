@@ -13,8 +13,9 @@ func _ready():
 	if get_parent().name == "PathFollow2D":
 		path = get_parent()
 		last_position = path.position
-	$ViewCone.rotation = deg_to_rad(viewcone_rotation)
-	play_animation("idle", idle_direction)
+	else:
+		$ViewCone.rotation = deg_to_rad(viewcone_rotation)
+		play_animation("idle", idle_direction)
 
 func _on_attacked() -> void:
 	print("Participant " + name + " was attacked!")
@@ -28,7 +29,7 @@ func play_animation(action: String, _direction: String):
 		
 
 func _process(_delta):
-	if get_parent().name == "PathFollow2D":
+	if path:
 		# change animation direction based on movement direction
 		direction = Vector2(0, 0)
 		
@@ -38,8 +39,7 @@ func _process(_delta):
 		elif path.position.x < last_position.x:
 			direction.x = -1
 			play_animation("walk", "left")
-			
-		if path.position.y > last_position.y:
+		elif path.position.y > last_position.y:
 			direction.y = 1
 			play_animation("walk", "down")
 		elif path.position.y < last_position.y:

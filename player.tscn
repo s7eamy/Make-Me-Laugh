@@ -9,10 +9,10 @@
 size = Vector2(17, 19)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_twqgg"]
-radius = 24.0
+radius = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wsl0p"]
-radius = 33.0
+radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3fufu"]
 radius = 12.0
@@ -26,6 +26,7 @@ collision_layer = 16
 collision_mask = 771
 input_pickable = true
 script = ExtResource("2_oy5m2")
+speed = 90
 
 [node name="PlayerAnimation" parent="PlayerBody" instance=ExtResource("4_p4rk2")]
 position = Vector2(1, -3)

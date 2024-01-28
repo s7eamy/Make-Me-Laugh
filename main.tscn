@@ -1,11 +1,15 @@
-[gd_scene load_steps=20 format=3 uid="uid://kywokndgrr2u"]
+[gd_scene load_steps=37 format=3 uid="uid://kywokndgrr2u"]
 
 [ext_resource type="Texture2D" uid="uid://dlg4hrgi0lc5x" path="res://art/environment/TopDownHouse_FloorsAndWalls.png" id="1_11a2i"]
 [ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="1_gx1qx"]
 [ext_resource type="Texture2D" uid="uid://djw3w8n7qfwli" path="res://art/environment/global.png" id="2_dnv7d"]
+[ext_resource type="PackedScene" uid="uid://donb8d06i1yde" path="res://hazard.tscn" id="4_mfodh"]
 [ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="4_r504u"]
 [ext_resource type="Texture2D" uid="uid://b651v5w3wemox" path="res://art/Lightning.png" id="5_5qh6j"]
+[ext_resource type="PackedScene" uid="uid://bci5htffm75nu" path="res://attack_radius.tscn" id="5_w2s4o"]
 [ext_resource type="Texture2D" uid="uid://b24q3tygrf6x8" path="res://art/environment/Cord.png" id="6_rp10o"]
+[ext_resource type="Script" path="res://PathFollow2D.gd" id="9_0xjun"]
+[ext_resource type="Texture2D" uid="uid://rc3hgsh8gc88" path="res://art/2d_lights_and_shadows_neutral_point_light.webp" id="9_ovgy1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp6jw"]
 atlas = ExtResource("2_dnv7d")
@@ -98,6 +102,48 @@ animations = [{
 "name": &"default",
 "speed": 1.0
 }]
+
+[sub_resource type="Curve2D" id="Curve2D_k4bgm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 320, 34, 0, 0, 0, 0, 320, -30, 0, 0, 0, 0, 280, -29, 0, 0, 0, 0, 280, -45, 0, 0, 0, 0, 280, -45, 0, 0, 0, 0, 280, -45, 0, 0, 0, 0, 280, -38, 0, 0, 0, 0, 280, -29, 0, 0, 0, 0, 237, -30, 0, 0, 0, 0, 237, 33, 0, 0, 0, 0, 320, 34)
+}
+point_count = 11
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sv2px"]
+size = Vector2(74, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_266gf"]
+size = Vector2(59, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_napeh"]
+size = Vector2(38, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywcwc"]
+size = Vector2(24.1273, 2.10855)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuv2h"]
+size = Vector2(219.976, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvcnm"]
+size = Vector2(181, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tipig"]
+size = Vector2(3.03222, 18.9212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4ci1"]
+size = Vector2(1.24276, 99.9958)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7xnd"]
+size = Vector2(13.9997, 153.061)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iedtx"]
+size = Vector2(16.9688, 409.932)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ftf0"]
+size = Vector2(8.5, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibsid"]
+size = Vector2(17, 25)
 
 [node name="Main" type="Node"]
 
@@ -372,28 +418,6 @@ texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(1536, 1029, 16, 27)
 
-[node name="Pax" parent="." instance=ExtResource("1_gx1qx")]
-z_index = 10
-position = Vector2(121, 9)
-viewcone_rotation = 270
-idle_direction = "up"
-
-[node name="Pax2" parent="." instance=ExtResource("1_gx1qx")]
-z_index = 10
-position = Vector2(30, 16)
-viewcone_rotation = 270
-idle_direction = "up"
-
-[node name="Pax3" parent="." instance=ExtResource("1_gx1qx")]
-z_index = 10
-position = Vector2(162, 12)
-viewcone_rotation = 180
-idle_direction = "left"
-
-[node name="Player" parent="." instance=ExtResource("4_r504u")]
-z_index = 11
-position = Vector2(162, 6)
-
 [node name="Corridor" type="Node" parent="."]
 
 [node name="Floor" type="Node" parent="Corridor"]
@@ -495,7 +519,7 @@ region_enabled = true
 region_rect = Rect2(18, 12, 30, 4)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Corridor/Floor"]
-z_index = 2
+z_index = 12
 position = Vector2(208.9, -16)
 scale = Vector2(0.6125, 1)
 texture = ExtResource("1_11a2i")
@@ -503,14 +527,14 @@ region_enabled = true
 region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Corridor/Floor"]
-z_index = 2
+z_index = 12
 position = Vector2(277.5, -16)
 texture = ExtResource("1_11a2i")
 region_enabled = true
 region_rect = Rect2(16, 76, 64, 5)
 
 [node name="Sprite2D6" type="Sprite2D" parent="Corridor/Floor"]
-z_index = 2
+z_index = 12
 position = Vector2(368.5, -16)
 scale = Vector2(1.21875, 1)
 texture = ExtResource("1_11a2i")
@@ -682,78 +706,84 @@ region_enabled = true
 region_rect = Rect2(191, 1024, 15, 32)
 
 [node name="Sprite2D45" type="Sprite2D" parent="Corridor/Walls"]
+z_index = 12
 position = Vector2(196.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D46" type="Sprite2D" parent="Corridor/Walls"]
+z_index = 12
 position = Vector2(212.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D47" type="Sprite2D" parent="Corridor/Walls"]
+z_index = 12
 position = Vector2(224.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 8, 32)
 
 [node name="Sprite2D48" type="Sprite2D" parent="Corridor/Walls"]
-z_index = 2
+z_index = 12
 position = Vector2(253.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D49" type="Sprite2D" parent="Corridor/Walls"]
-z_index = 2
+z_index = 12
 position = Vector2(269.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D50" type="Sprite2D" parent="Corridor/Walls"]
-z_index = 2
+z_index = 12
 position = Vector2(285.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D51" type="Sprite2D" parent="Corridor/Walls"]
-z_index = 2
+z_index = 12
 position = Vector2(301.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D52" type="Sprite2D" parent="Corridor/Walls"]
+z_index = 12
 position = Vector2(337.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D53" type="Sprite2D" parent="Corridor/Walls"]
+z_index = 12
 position = Vector2(353.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D54" type="Sprite2D" parent="Corridor/Walls"]
+z_index = 12
 position = Vector2(369.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D55" type="Sprite2D" parent="Corridor/Walls"]
-z_index = 2
+z_index = 12
 position = Vector2(385.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
 region_rect = Rect2(336, 768, 16, 32)
 
 [node name="Sprite2D56" type="Sprite2D" parent="Corridor/Walls"]
-z_index = 2
+z_index = 12
 position = Vector2(400.5, 2)
 texture = ExtResource("2_dnv7d")
 region_enabled = true
@@ -809,7 +839,7 @@ region_enabled = true
 region_rect = Rect2(1841, 2291, 15, 30)
 
 [node name="Poster1" type="Sprite2D" parent="Corridor"]
-z_index = 5
+z_index = 13
 position = Vector2(361.5, -0.999992)
 scale = Vector2(0.757143, 0.74)
 texture = ExtResource("2_dnv7d")
@@ -817,7 +847,7 @@ region_enabled = true
 region_rect = Rect2(2054, 1091, 35, 25)
 
 [node name="Poster2" type="Sprite2D" parent="Corridor"]
-z_index = 5
+z_index = 13
 position = Vector2(206.5, -0.999992)
 scale = Vector2(0.757143, 0.74)
 texture = ExtResource("2_dnv7d")
@@ -825,7 +855,7 @@ region_enabled = true
 region_rect = Rect2(2055, 1059, 20, 26)
 
 [node name="Poster3" type="Sprite2D" parent="Corridor"]
-z_index = 5
+z_index = 13
 position = Vector2(277.5, -1.99999)
 scale = Vector2(0.757143, 0.74)
 texture = ExtResource("2_dnv7d")
@@ -835,7 +865,7 @@ region_rect = Rect2(2086, 1155, 19, 22)
 [node name="Electricity Box" type="Node" parent="Corridor"]
 
 [node name="Box" type="Sprite2D" parent="Corridor/Electricity Box"]
-z_index = 5
+z_index = 14
 position = Vector2(393.5, 2)
 scale = Vector2(1.52321, 1.52107)
 texture = ExtResource("2_dnv7d")
@@ -843,21 +873,27 @@ region_enabled = true
 region_rect = Rect2(1584, 2359, 7, 7)
 
 [node name="Lightning" type="Sprite2D" parent="Corridor/Electricity Box"]
-z_index = 6
+z_index = 14
 position = Vector2(393, 2)
 scale = Vector2(0.158334, 0.159722)
 texture = ExtResource("5_5qh6j")
 
+[node name="Hazard" parent="Corridor/Electricity Box" instance=ExtResource("4_mfodh")]
+position = Vector2(391, 7)
+
+[node name="AttackRadius" parent="Corridor/Electricity Box/Hazard" instance=ExtResource("5_w2s4o")]
+position = Vector2(-113, -62)
+
 [node name="Electrical Cord" type="Node" parent="Corridor"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Corridor/Electrical Cord"]
-z_index = 4
+z_index = 13
 position = Vector2(400, -13)
 scale = Vector2(0.46875, 0.25)
 texture = ExtResource("6_rp10o")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Corridor/Electrical Cord"]
-z_index = 4
+z_index = 13
 position = Vector2(393.5, -7.1081)
 rotation = 1.5708
 scale = Vector2(-0.425135, -0.25)
@@ -905,3 +941,221 @@ position = Vector2(278.5, -80)
 rotation = 1.5708
 scale = Vector2(-0.425135, -0.25)
 texture = ExtResource("6_rp10o")
+
+[node name="Pax" parent="." instance=ExtResource("1_gx1qx")]
+z_index = 10
+position = Vector2(121, 9)
+viewcone_rotation = 270
+idle_direction = "up"
+
+[node name="Pax2" parent="." instance=ExtResource("1_gx1qx")]
+z_index = 10
+position = Vector2(30, 16)
+viewcone_rotation = 270
+idle_direction = "up"
+
+[node name="Pax4" parent="." instance=ExtResource("1_gx1qx")]
+z_index = 10
+position = Vector2(254, -47)
+viewcone_rotation = 270
+idle_direction = "up"
+
+[node name="Pax3" parent="." instance=ExtResource("1_gx1qx")]
+z_index = 10
+position = Vector2(162, 12)
+viewcone_rotation = 180
+idle_direction = "left"
+
+[node name="Player" parent="." instance=ExtResource("4_r504u")]
+z_index = 11
+position = Vector2(12, 42)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_k4bgm")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(320, 34)
+rotates = false
+script = ExtResource("9_0xjun")
+
+[node name="Pax5" parent="Path2D/PathFollow2D" instance=ExtResource("1_gx1qx")]
+z_index = 10
+
+[node name="Colliders" type="Node2D" parent="."]
+
+[node name="Wall Collision10" type="StaticBody2D" parent="Colliders"]
+position = Vector2(363, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision10"]
+position = Vector2(6, 5)
+shape = SubResource("RectangleShape2D_sv2px")
+
+[node name="Wall Collision9" type="StaticBody2D" parent="Colliders"]
+position = Vector2(265, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision9"]
+position = Vector2(13.5, 5.5)
+shape = SubResource("RectangleShape2D_266gf")
+
+[node name="Wall Collision8" type="StaticBody2D" parent="Colliders"]
+y_sort_enabled = true
+position = Vector2(208, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision8"]
+y_sort_enabled = true
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_napeh")
+
+[node name="Wall Collision12" type="StaticBody2D" parent="Colliders"]
+position = Vector2(355, -63)
+rotation = 1.34609
+scale = Vector2(0.999997, 0.999997)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision12"]
+position = Vector2(3.78223, -3.09445)
+rotation = 0.224007
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ywcwc")
+
+[node name="Wall Collision12" type="StaticBody2D" parent="Colliders/Wall Collision12"]
+position = Vector2(9.91559, -25.43)
+rotation = 0.00900304
+scale = Vector2(0.999997, 0.999997)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision12/Wall Collision12"]
+position = Vector2(3.78223, -3.09445)
+rotation = 0.224007
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ywcwc")
+
+[node name="Wall Collision11" type="StaticBody2D" parent="Colliders"]
+position = Vector2(328, -61)
+rotation = 1.35869
+scale = Vector2(0.999998, 0.999998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision11"]
+position = Vector2(3.78223, -3.09445)
+rotation = 0.224007
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ywcwc")
+
+[node name="Wall Collision7" type="StaticBody2D" parent="Colliders"]
+position = Vector2(230, -55)
+rotation = -1.773
+scale = Vector2(0.999999, 0.999999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision7"]
+position = Vector2(3.78223, -3.09445)
+rotation = 0.224007
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ywcwc")
+
+[node name="Wall Collision6" type="StaticBody2D" parent="Colliders"]
+position = Vector2(401, -72)
+rotation = -0.215612
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision6"]
+position = Vector2(-99.1084, -19.4946)
+rotation = 0.224008
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_wuv2h")
+
+[node name="Sidewall Collision" type="StaticBody2D" parent="Colliders"]
+position = Vector2(93, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Sidewall Collision"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_qvcnm")
+
+[node name="Wall Collision5" type="StaticBody2D" parent="Colliders"]
+position = Vector2(187, 48)
+rotation = -0.107806
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision5"]
+position = Vector2(-0.347443, 7.55846)
+rotation = 0.0738799
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_tipig")
+
+[node name="Wall Collision4" type="StaticBody2D" parent="Colliders"]
+position = Vector2(187, 19)
+rotation = -0.0539029
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision4"]
+position = Vector2(4.2283, -54.8544)
+rotation = 0.0738799
+shape = SubResource("RectangleShape2D_e4ci1")
+
+[node name="Wall Collision3" type="StaticBody2D" parent="Colliders"]
+position = Vector2(424, 56)
+rotation = 3.11464
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision3"]
+position = Vector2(8.13782, 69.2086)
+rotation = 0.0149984
+shape = SubResource("RectangleShape2D_q7xnd")
+
+[node name="Wall Collision2" type="StaticBody2D" parent="Colliders"]
+position = Vector2(206, 68)
+rotation = -1.58427
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision2"]
+position = Vector2(1.51534, 0.0257568)
+rotation = 0.0149984
+shape = SubResource("RectangleShape2D_iedtx")
+
+[node name="Wall Collision" type="StaticBody2D" parent="Colliders"]
+position = Vector2(-3, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/Wall Collision"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_3ftf0")
+
+[node name="TV Collision" type="StaticBody2D" parent="Colliders"]
+position = Vector2(29, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colliders/TV Collision"]
+position = Vector2(1.5, -12.5)
+shape = SubResource("RectangleShape2D_ibsid")
+
+[node name="Lighting" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="Lighting"]
+position = Vector2(53, 0)
+energy = 0.4
+texture = ExtResource("9_ovgy1")
+texture_scale = 1.5
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lighting"]
+position = Vector2(98, -3)
+energy = 0.4
+texture = ExtResource("9_ovgy1")
+texture_scale = 1.5
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lighting"]
+position = Vector2(229, -32)
+energy = 0.5
+texture = ExtResource("9_ovgy1")
+texture_scale = 1.2
+
+[node name="PointLight2D4" type="PointLight2D" parent="Lighting"]
+position = Vector2(318, -28)
+energy = 0.5
+texture = ExtResource("9_ovgy1")
+texture_scale = 1.2
+
+[node name="PointLight2D5" type="PointLight2D" parent="Lighting"]
+position = Vector2(274, 41)
+energy = 0.5
+texture = ExtResource("9_ovgy1")
+texture_scale = 1.2
+
+[node name="PointLight2D6" type="PointLight2D" parent="Lighting"]
+position = Vector2(393, 4)
+energy = 0.4
+texture = ExtResource("9_ovgy1")
+texture_scale = 0.2
