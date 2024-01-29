@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dn6fvk1u5r0lk"]
 
-[ext_resource type="Script" path="res://Pax.gd" id="1_ats0o"]
+[ext_resource type="Script" path="res://pax.gd" id="1_ats0o"]
 [ext_resource type="PackedScene" uid="uid://d3dovpi5mlqnt" path="res://pax_animation_a.tscn" id="2_1ft3y"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqln8"]
 size = Vector2(17, 17)

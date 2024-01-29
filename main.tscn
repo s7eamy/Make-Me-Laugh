@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://kywokndgrr2u"]
+[gd_scene load_steps=44 format=3 uid="uid://kywokndgrr2u"]
 
 [ext_resource type="Texture2D" uid="uid://dlg4hrgi0lc5x" path="res://art/environment/TopDownHouse_FloorsAndWalls.png" id="1_11a2i"]
 [ext_resource type="PackedScene" uid="uid://dn6fvk1u5r0lk" path="res://pax.tscn" id="1_gx1qx"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b24q3tygrf6x8" path="res://art/environment/Cord.png" id="6_rp10o"]
 [ext_resource type="Script" path="res://PathFollow2D.gd" id="9_0xjun"]
 [ext_resource type="Texture2D" uid="uid://rc3hgsh8gc88" path="res://art/2d_lights_and_shadows_neutral_point_light.webp" id="9_ovgy1"]
+[ext_resource type="AudioStream" uid="uid://c3vropejv8ujq" path="res://sounds/Soundtrack.wav" id="12_1h5wi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp6jw"]
 atlas = ExtResource("2_dnv7d")
@@ -1228,5 +1229,9 @@ offset_bottom = -293.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_1h5wi")
+autoplay = true
 
 [connection signal="animation_finished" from="Corridor/Electricity Box/Hazard/LightningAnimation/AnimatedSprite2D" to="Corridor/Electricity Box/Hazard" method="_on_animated_sprite_2d_animation_finished"]
