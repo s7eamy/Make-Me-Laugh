@@ -5,12 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://djw3w8n7qfwli" path="res://art/environment/global.png" id="2_dnv7d"]
 [ext_resource type="PackedScene" uid="uid://donb8d06i1yde" path="res://hazard.tscn" id="4_mfodh"]
 [ext_resource type="PackedScene" uid="uid://ccxfekdwud7n6" path="res://player.tscn" id="4_r504u"]
-[ext_resource type="Texture2D" path="res://art/Lightning.png" id="5_5qh6j"]
-[ext_resource type="PackedScene" path="res://attack_radius.tscn" id="5_w2s4o"]
-[ext_resource type="Texture2D" path="res://art/environment/Lightning Strike.png" id="6_3pfgu"]
-[ext_resource type="Texture2D" path="res://art/environment/Cord.png" id="6_rp10o"]
+[ext_resource type="Texture2D" uid="uid://b651v5w3wemox" path="res://art/Lightning.png" id="5_5qh6j"]
+[ext_resource type="PackedScene" uid="uid://bci5htffm75nu" path="res://attack_radius.tscn" id="5_w2s4o"]
+[ext_resource type="Texture2D" uid="uid://bmg2suuuk1wan" path="res://art/environment/Lightning Strike.png" id="6_3pfgu"]
+[ext_resource type="Texture2D" uid="uid://b24q3tygrf6x8" path="res://art/environment/Cord.png" id="6_rp10o"]
 [ext_resource type="Script" path="res://PathFollow2D.gd" id="9_0xjun"]
-[ext_resource type="Texture2D" path="res://art/2d_lights_and_shadows_neutral_point_light.webp" id="9_ovgy1"]
+[ext_resource type="Texture2D" uid="uid://rc3hgsh8gc88" path="res://art/2d_lights_and_shadows_neutral_point_light.webp" id="9_ovgy1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp6jw"]
 atlas = ExtResource("2_dnv7d")
@@ -1215,5 +1215,18 @@ position = Vector2(393, 4)
 energy = 0.4
 texture = ExtResource("9_ovgy1")
 texture_scale = 0.2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -286.0
+offset_top = -293.0
+offset_right = -286.0
+offset_bottom = -293.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="animation_finished" from="Corridor/Electricity Box/Hazard/LightningAnimation/AnimatedSprite2D" to="Corridor/Electricity Box/Hazard" method="_on_animated_sprite_2d_animation_finished"]
